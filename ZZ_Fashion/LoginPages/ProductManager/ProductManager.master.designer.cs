@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion {
+namespace ZZ_Fashion.LoginPages.ProductManager {
     
     
-    public partial class SiteMaster {
-        
-        /// <summary>
-        /// Navbar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Navbar;
+    public partial class ProductManager {
         
         /// <summary>
         /// MainContent control.

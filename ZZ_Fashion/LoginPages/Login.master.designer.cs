@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion {
+namespace ZZ_Fashion.LoginPages {
     
     
-    public partial class SiteMaster {
+    public partial class Login {
         
         /// <summary>
         /// Navbar control.

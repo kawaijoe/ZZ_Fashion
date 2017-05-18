@@ -1,0 +1,9 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/LoginPages/Login.master" AutoEventWireup="true" CodeBehind="SalesPersonnel.master.cs" Inherits="ZZ_Fashion.LoginPages.SalesPersonnel.SalesPersonnel" %>
+
+<asp:Content ID="Navbar" ContentPlaceHolderID="Navbar" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
