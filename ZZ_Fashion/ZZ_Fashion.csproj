@@ -143,6 +143,10 @@
     </Content>
     <Content Include="LoginPages\Customer\Customer.master" />
     <Content Include="LoginPages\MarketingManager\MarketingManager.master" />
+    <Content Include="LoginPages\MarketingManager\Response.aspx" />
+    <Content Include="LoginPages\MarketingManager\ViewFeedback.aspx" />
+    <Content Include="LoginPages\MarketingManager\ViewList.aspx" />
+    <Content Include="LoginPages\MarketingManager\IssueVoucher.aspx" />
     <Content Include="LoginPages\ProductManager\CreateProduct.aspx" />
     <Content Include="LoginPages\ProductManager\ProductManager.master" />
     <Content Include="LoginPages\ProductManager\ViewProduct.aspx" />
@@ -230,6 +234,34 @@
     </Compile>
     <Compile Include="LoginPages\MarketingManager\MarketingManager.master.designer.cs">
       <DependentUpon>MarketingManager.master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\MarketingManager\Response.aspx.cs">
+      <DependentUpon>Response.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\MarketingManager\Response.aspx.designer.cs">
+      <DependentUpon>Response.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\MarketingManager\ViewFeedback.aspx.cs">
+      <DependentUpon>ViewFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\MarketingManager\ViewFeedback.aspx.designer.cs">
+      <DependentUpon>ViewFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\MarketingManager\ViewList.aspx.cs">
+      <DependentUpon>ViewList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\MarketingManager\ViewList.aspx.designer.cs">
+      <DependentUpon>ViewList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\MarketingManager\IssueVoucher.aspx.cs">
+      <DependentUpon>IssueVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\MarketingManager\IssueVoucher.aspx.designer.cs">
+      <DependentUpon>IssueVoucher.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPages\ProductManager\CreateProduct.aspx.cs">
       <DependentUpon>CreateProduct.aspx</DependentUpon>
