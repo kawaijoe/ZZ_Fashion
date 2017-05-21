@@ -142,7 +142,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\ZZFashion_Logo.png" />
+    <Content Include="LoginPages\Customer\BirthdayMessage.aspx" />
+    <Content Include="LoginPages\Customer\ChangePassword.aspx" />
+    <Content Include="LoginPages\Customer\CreateFeedback.aspx" />
     <Content Include="LoginPages\Customer\Customer.master" />
+    <Content Include="LoginPages\Customer\CustomerHomePage.aspx" />
+    <Content Include="LoginPages\Customer\Profile.aspx" />
+    <Content Include="LoginPages\Customer\UpdateCustomer.aspx" />
+    <Content Include="LoginPages\Customer\ViewResponse.aspx" />
     <Content Include="LoginPages\MarketingManager\MarketingManager.master" />
     <Content Include="LoginPages\MarketingManager\Response.aspx" />
     <Content Include="LoginPages\MarketingManager\ViewFeedback.aspx" />
@@ -215,12 +222,61 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LoginPages\Customer\BirthdayMessage.aspx.cs">
+      <DependentUpon>BirthdayMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Customer\BirthdayMessage.aspx.designer.cs">
+      <DependentUpon>BirthdayMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\Customer\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Customer\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\Customer\CreateFeedback.aspx.cs">
+      <DependentUpon>CreateFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Customer\CreateFeedback.aspx.designer.cs">
+      <DependentUpon>CreateFeedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LoginPages\Customer\Customer.master.cs">
       <DependentUpon>Customer.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LoginPages\Customer\Customer.master.designer.cs">
       <DependentUpon>Customer.master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\Customer\CustomerHomePage.aspx.cs">
+      <DependentUpon>CustomerHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Customer\CustomerHomePage.aspx.designer.cs">
+      <DependentUpon>CustomerHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\Customer\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Customer\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\Customer\UpdateCustomer.aspx.cs">
+      <DependentUpon>UpdateCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Customer\UpdateCustomer.aspx.designer.cs">
+      <DependentUpon>UpdateCustomer.aspx</DependentUpon>
+    </Compile>
+    <Content Include="LoginPages\Customer\ViewResponse.aspx.cs">
+      <DependentUpon>ViewResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Compile Include="LoginPages\Customer\ViewResponse.aspx.designer.cs">
+      <DependentUpon>ViewResponse.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPages\Login.master.cs">
       <DependentUpon>Login.master</DependentUpon>
