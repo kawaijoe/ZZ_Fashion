@@ -1,6 +1,11 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/LoginPages/Login.master" AutoEventWireup="true" CodeBehind="SalesPersonnel.master.cs" Inherits="ZZ_Fashion.LoginPages.SalesPersonnel.SalesPersonnel" %>
 
 <asp:Content ID="Navbar" ContentPlaceHolderID="Navbar" runat="server">
+    <li><a runat="server" href="~/">Create Customer</a></li>
+    <li><a runat="server" href="~/">View Customer</a></li>
+    <li><a runat="server" href="~/">Voucher Collect</a></li>
+    <li><a runat="server" href="~/">Voucher Redeem</a></li>
+   
 </asp:Content>
 
 <asp:Content ID="NavbarRight" ContentPlaceHolderID="NavbarRight" runat="server">
