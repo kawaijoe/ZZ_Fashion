@@ -6,6 +6,9 @@
     <li><a runat="server" href="~/Contact">Contact</a></li>
 </asp:Content>
 
+<asp:Content ID="NavbarRight" ContentPlaceHolderID="NavbarRight" runat="server">
+</asp:Content>
+
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ContentPlaceHolder ID="MainContent" runat="server">
     </asp:ContentPlaceHolder>

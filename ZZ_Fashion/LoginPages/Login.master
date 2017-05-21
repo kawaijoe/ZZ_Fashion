@@ -1,9 +1,16 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="ZZ_Fashion.LoginPages.Login" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="Navbar" runat="server">
     <asp:ContentPlaceHolder ID="Navbar" runat="server">
     </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="NavbarRight" runat="server">
+    <asp:ContentPlaceHolder ID="NavbarRight" runat="server">
+    </asp:ContentPlaceHolder>
     <li><a runat="server" href="~/Default">Log Out</a></li>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ContentPlaceHolder ID="MainContent" runat="server">
     </asp:ContentPlaceHolder>

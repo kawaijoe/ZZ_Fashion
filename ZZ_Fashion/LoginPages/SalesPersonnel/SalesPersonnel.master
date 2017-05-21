@@ -3,6 +3,9 @@
 <asp:Content ID="Navbar" ContentPlaceHolderID="Navbar" runat="server">
 </asp:Content>
 
+<asp:Content ID="NavbarRight" ContentPlaceHolderID="NavbarRight" runat="server">
+</asp:Content>
+
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ContentPlaceHolder ID="MainContent" runat="server">
     </asp:ContentPlaceHolder>

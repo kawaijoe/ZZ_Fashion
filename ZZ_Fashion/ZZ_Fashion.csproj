@@ -141,6 +141,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\ZZFashion_Logo.png" />
     <Content Include="LoginPages\Customer\Customer.master" />
     <Content Include="LoginPages\MarketingManager\MarketingManager.master" />
     <Content Include="LoginPages\MarketingManager\Response.aspx" />
