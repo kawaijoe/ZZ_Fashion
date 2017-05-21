@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  zz_fashion:
+    image: zz_fashion:dev
+    build:
+      args:
+        source: ${DOCKER_BUILD_SOURCE}
+    volumes:
+      - .\ZZ_Fashion:C:\inetpub\wwwroot
+      - ~\msvsmon:C:\msvsmon:ro
+    labels:
+      - "com.microsoft.visualstudio.targetoperatingsystem=windows"

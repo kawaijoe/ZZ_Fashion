@@ -126,7 +126,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -152,18 +151,33 @@
     <Content Include="LoginPages\MarketingManager\Transactions.aspx" />
     <Content Include="LoginPages\MarketingManager\Voucher.aspx" />
     <Content Include="LoginPages\ProductManager\CreateProduct.aspx" />
+    <Content Include="LoginPages\ProductManager\Image\Capture.PNG" />
     <Content Include="LoginPages\ProductManager\ProductManager.master" />
     <Content Include="LoginPages\ProductManager\UpdateProduct.aspx" />
     <Content Include="LoginPages\ProductManager\UploadImage.aspx" />
-    <Content Include="LoginPages\ProductManager\ViewNewProduct.aspx" />
     <Content Include="LoginPages\ProductManager\ViewProduct.aspx" />
     <Content Include="LoginPages\SalesPersonnel\CreateCustomer.aspx" />
     <Content Include="LoginPages\SalesPersonnel\SalesPersonnel.master" />
     <Content Include="LoginPages\Login.master" />
+    <Content Include="Public\AboutUs.aspx" />
+    <Content Include="Public\Cart.aspx" />
+    <Content Include="Public\Catalogue.aspx" />
+    <Content Include="Public\Image\cart.PNG" />
+    <Content Include="Public\Image\catalogue.PNG" />
+    <Content Include="Public\Image\man.PNG" />
+    <Content Include="Public\Image\women.PNG" />
+    <Content Include="Public\Login.aspx" />
+    <Content Include="Public\Public.master" />
+    <None Include="Dockerfile" />
+    <None Include=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="LoginPages\SalesPersonnel\ViewCustomer.aspx" />
     <Content Include="LoginPages\SalesPersonnel\VoucherCollect.aspx" />
     <Content Include="LoginPages\SalesPersonnel\VoucherRedeem.aspx" />
+    <Content Include="Public\RecoverPassword.aspx" />
+    <Content Include="Public\Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -200,13 +214,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -302,13 +309,6 @@
     <Compile Include="LoginPages\ProductManager\UploadImage.aspx.designer.cs">
       <DependentUpon>UploadImage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginPages\ProductManager\ViewNewProduct.aspx.cs">
-      <DependentUpon>ViewNewProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginPages\ProductManager\ViewNewProduct.aspx.designer.cs">
-      <DependentUpon>ViewNewProduct.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LoginPages\ProductManager\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -352,6 +352,55 @@
       <DependentUpon>VoucherRedeem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Catalogue.aspx.cs">
+      <DependentUpon>Catalogue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Catalogue.aspx.designer.cs">
+      <DependentUpon>Catalogue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Public.master.cs">
+      <DependentUpon>Public.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Public.master.designer.cs">
+      <DependentUpon>Public.master</DependentUpon>
+    </Compile>
+    <Compile Include="Public\RecoverPassword.aspx.cs">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\RecoverPassword.aspx.designer.cs">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

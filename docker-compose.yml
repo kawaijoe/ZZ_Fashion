@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  zz_fashion:
+    image: zz_fashion
+    build:
+      context: .\ZZ_Fashion
+      dockerfile: Dockerfile
