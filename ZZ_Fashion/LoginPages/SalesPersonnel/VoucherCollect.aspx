@@ -1,8 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="VoucherCollect.aspx.cs" Inherits="ZZ_Fashion.LoginPages.SalesPersonnel.VoucherCollect" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="Navbar" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="NavbarRight" runat="server">
-</asp:Content>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPages/SalesPersonnel/SalesPersonnel.master" AutoEventWireup="true" CodeBehind="VoucherCollect.aspx.cs" Inherits="ZZ_Fashion.LoginPages.SalesPersonnel.VoucherCollect" %>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <table class="nav-justified">
         <tr>
