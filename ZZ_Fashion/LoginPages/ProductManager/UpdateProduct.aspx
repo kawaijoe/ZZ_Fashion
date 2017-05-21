@@ -1,10 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPages/ProductManager/ProductManager.master" AutoEventWireup="true" CodeBehind="CreateProduct.aspx.cs" Inherits="ZZ_Fashion.LoginPages.ProductManager.CreateProduct" %>
-
-<asp:Content ID="Content" ContentPlaceHolderID="PageTitle" runat="server">
-    Create Product
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPages/ProductManager/ProductManager.master" AutoEventWireup="true" CodeBehind="UpdateProduct.aspx.cs" Inherits="ZZ_Fashion.LoginPages.ProductManager.UpdateProducts" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
+    Update Products
 </asp:Content>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row top-padding">
         <div class="col-md-4" align="right">Title:</div>
         <div class="col-md-8">
@@ -36,9 +34,28 @@
         </div>
     </div>
     <div class="row top-padding">
+        <div class="col-md-4" align="right">Obsolete:</div>
+        <div class="col-md-8">
+            <asp:RadioButton 
+                ID="ObsoleteTrue" 
+                runat="server" 
+                Text="True"
+                GroupName="Obsolete" 
+                />
+            <br />
+            <asp:RadioButton 
+                ID="ObsoleteFalse" 
+                runat="server" 
+                Text="False" 
+                GroupName="Obsolete"
+                Checked="True" 
+                />
+        </div>
+    </div>
+    <div class="row top-padding">
         <div class="col-md-4" align="right"></div>
         <div class="col-md-8">
-            <asp:Button ID="Submit" runat="server" Text="Submit" />
+            <asp:Button ID="Update" runat="server" Text="Update" />
         </div>
     </div>
 </asp:Content>

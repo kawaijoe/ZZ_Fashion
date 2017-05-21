@@ -1,14 +1,22 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/LoginPages/Login.master" AutoEventWireup="true" CodeBehind="ProductManager.master.cs" Inherits="ZZ_Fashion.LoginPages.ProductManager.ProductManager" %>
 
 <asp:Content ID="Navbar" ContentPlaceHolderID="Navbar" runat="server">
-    <li><a runat="server" href="~/">Create Product</a></li>
-    <li><a runat="server" href="~/About">Product Manager</a></li>
+    <li><a runat="server" href="~/LoginPages/ProductManager/ViewNewProduct.aspx">New Product</a></li>
+    <li><a runat="server" href="~/LoginPages/ProductManager/CreateProduct.aspx">Create Product</a></li>
+    <li><a runat="server" href="~/LoginPages/ProductManager/ViewProduct.aspx">View Product</a></li>
+    <li><a runat="server" href="~/LoginPages/ProductManager/UploadImage.aspx">Upload Image</a></li>
 </asp:Content>
 
 <asp:Content ID="NavbarRight" ContentPlaceHolderID="NavbarRight" runat="server">
 </asp:Content>
 
+<asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
+    <asp:ContentPlaceHolder ID="PageTitle" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
+
     <asp:ContentPlaceHolder ID="MainContent" runat="server">
     </asp:ContentPlaceHolder>
 </asp:Content>

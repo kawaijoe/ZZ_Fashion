@@ -141,6 +141,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Placeholder.jpg" />
     <Content Include="Images\ZZFashion_Logo.png" />
     <Content Include="LoginPages\Customer\Customer.master" />
     <Content Include="LoginPages\MarketingManager\images\Fake.PNG" />
@@ -152,6 +153,9 @@
     <Content Include="LoginPages\MarketingManager\Voucher.aspx" />
     <Content Include="LoginPages\ProductManager\CreateProduct.aspx" />
     <Content Include="LoginPages\ProductManager\ProductManager.master" />
+    <Content Include="LoginPages\ProductManager\UpdateProduct.aspx" />
+    <Content Include="LoginPages\ProductManager\UploadImage.aspx" />
+    <Content Include="LoginPages\ProductManager\ViewNewProduct.aspx" />
     <Content Include="LoginPages\ProductManager\ViewProduct.aspx" />
     <Content Include="LoginPages\SalesPersonnel\CreateCustomer.aspx" />
     <Content Include="LoginPages\SalesPersonnel\SalesPersonnel.master" />
@@ -283,6 +287,27 @@
     </Compile>
     <Compile Include="LoginPages\ProductManager\ProductManager.master.designer.cs">
       <DependentUpon>ProductManager.master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\ProductManager\UpdateProduct.aspx.cs">
+      <DependentUpon>UpdateProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\ProductManager\UpdateProduct.aspx.designer.cs">
+      <DependentUpon>UpdateProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\ProductManager\UploadImage.aspx.cs">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\ProductManager\UploadImage.aspx.designer.cs">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\ProductManager\ViewNewProduct.aspx.cs">
+      <DependentUpon>ViewNewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\ProductManager\ViewNewProduct.aspx.designer.cs">
+      <DependentUpon>ViewNewProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPages\ProductManager\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>

@@ -10,7 +10,7 @@
 namespace ZZ_Fashion.LoginPages.ProductManager {
     
     
-    public partial class CreateProduct {
+    public partial class UpdateProducts {
         
         /// <summary>
         /// ProductTitle control.
@@ -58,12 +58,30 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
         protected global::System.Web.UI.WebControls.Calendar EffectiveDate;
         
         /// <summary>
-        /// Submit control.
+        /// ObsoleteTrue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Submit;
+        protected global::System.Web.UI.WebControls.RadioButton ObsoleteTrue;
+        
+        /// <summary>
+        /// ObsoleteFalse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ObsoleteFalse;
+        
+        /// <summary>
+        /// Update control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Update;
     }
 }
