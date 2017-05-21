@@ -5,7 +5,6 @@
     <li><a runat="server" href="~/">View Customer</a></li>
     <li><a runat="server" href="~/">Voucher Collect</a></li>
     <li><a runat="server" href="~/">Voucher Redeem</a></li>
-   
 </asp:Content>
 
 <asp:Content ID="NavbarRight" ContentPlaceHolderID="NavbarRight" runat="server">
