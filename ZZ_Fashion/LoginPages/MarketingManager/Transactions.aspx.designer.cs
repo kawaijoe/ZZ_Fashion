@@ -10,7 +10,16 @@
 namespace ZZ_Fashion.LoginPages.MarketingManager {
     
     
-    public partial class ViewFeedback {
+    public partial class ViewList {
+        
+        /// <summary>
+        /// TransactionsTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TransactionsTitle;
         
         /// <summary>
         /// GridView1 control.
