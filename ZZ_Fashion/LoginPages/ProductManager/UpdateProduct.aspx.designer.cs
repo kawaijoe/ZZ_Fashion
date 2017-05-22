@@ -7,63 +7,81 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion.LoginPages.MarketingManager {
+namespace ZZ_Fashion.LoginPages.ProductManager {
     
     
-    public partial class Response {
+    public partial class UpdateProducts {
         
         /// <summary>
-        /// FeedbackResponseTitle control.
+        /// ProductTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FeedbackResponseTitle;
+        protected global::System.Web.UI.WebControls.TextBox ProductTitle;
         
         /// <summary>
-        /// FeedbackTitle control.
+        /// ImagePreview control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FeedbackTitle;
+        protected global::System.Web.UI.WebControls.Image ImagePreview;
         
         /// <summary>
-        /// CustomerID control.
+        /// UploadFile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CustomerID;
+        protected global::System.Web.UI.WebControls.Button UploadFile;
         
         /// <summary>
-        /// Feedback control.
+        /// Price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Feedback;
+        protected global::System.Web.UI.WebControls.TextBox Price;
         
         /// <summary>
-        /// ResponseTitle control.
+        /// EffectiveDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ResponseTitle;
+        protected global::System.Web.UI.WebControls.Calendar EffectiveDate;
         
         /// <summary>
-        /// FeedbackResponse control.
+        /// ObsoleteTrue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FeedbackResponse;
+        protected global::System.Web.UI.WebControls.RadioButton ObsoleteTrue;
+        
+        /// <summary>
+        /// ObsoleteFalse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ObsoleteFalse;
+        
+        /// <summary>
+        /// Update control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Update;
     }
 }

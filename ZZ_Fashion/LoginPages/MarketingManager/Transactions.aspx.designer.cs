@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion.LoginPages.ProductManager {
+namespace ZZ_Fashion.LoginPages.MarketingManager {
     
     
-    public partial class ProductManager {
+    public partial class ViewList {
         
         /// <summary>
-        /// PageTitle control.
+        /// TransactionsTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder PageTitle;
+        protected global::System.Web.UI.WebControls.Label TransactionsTitle;
         
         /// <summary>
-        /// MainContent control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

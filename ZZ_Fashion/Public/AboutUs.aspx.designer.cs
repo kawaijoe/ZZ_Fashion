@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion.LoginPages.MarketingManager {
+namespace ZZ_Fashion.Public {
 
 
-    public partial class Voucher {
+    public partial class AboutUs {
     }
 }

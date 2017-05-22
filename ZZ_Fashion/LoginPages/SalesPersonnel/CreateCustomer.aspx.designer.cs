@@ -7,63 +7,81 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion.LoginPages.MarketingManager {
+namespace ZZ_Fashion.LoginPages.SalesPersonnel {
     
     
-    public partial class Response {
+    public partial class CreateCustomer {
         
         /// <summary>
-        /// FeedbackResponseTitle control.
+        /// ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FeedbackResponseTitle;
+        protected global::System.Web.UI.WebControls.TextBox ID;
         
         /// <summary>
-        /// FeedbackTitle control.
+        /// Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FeedbackTitle;
+        protected global::System.Web.UI.WebControls.TextBox Name;
         
         /// <summary>
-        /// CustomerID control.
+        /// Male control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CustomerID;
+        protected global::System.Web.UI.WebControls.CheckBox Male;
         
         /// <summary>
-        /// Feedback control.
+        /// Female control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Feedback;
+        protected global::System.Web.UI.WebControls.CheckBox Female;
         
         /// <summary>
-        /// ResponseTitle control.
+        /// DOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ResponseTitle;
+        protected global::System.Web.UI.WebControls.TextBox DOB;
         
         /// <summary>
-        /// FeedbackResponse control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FeedbackResponse;
+        protected global::System.Web.UI.WebControls.TextBox Email;
+        
+        /// <summary>
+        /// Phone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Phone;
+        
+        /// <summary>
+        /// Address control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Address;
     }
 }

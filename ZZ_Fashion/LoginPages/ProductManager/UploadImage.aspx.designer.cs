@@ -10,24 +10,24 @@
 namespace ZZ_Fashion.LoginPages.ProductManager {
     
     
-    public partial class ProductManager {
+    public partial class UploadImage {
         
         /// <summary>
-        /// PageTitle control.
+        /// ImagePreview control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder PageTitle;
+        protected global::System.Web.UI.WebControls.Image ImagePreview;
         
         /// <summary>
-        /// MainContent control.
+        /// UploadFile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button UploadFile;
     }
 }

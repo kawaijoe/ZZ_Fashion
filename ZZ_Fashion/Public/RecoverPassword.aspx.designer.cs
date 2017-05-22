@@ -7,63 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion.LoginPages.MarketingManager {
+namespace ZZ_Fashion.Public {
     
     
-    public partial class Response {
+    public partial class RecoverPassword {
         
         /// <summary>
-        /// FeedbackResponseTitle control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FeedbackResponseTitle;
+        protected global::System.Web.UI.WebControls.TextBox Email;
         
         /// <summary>
-        /// FeedbackTitle control.
+        /// NewPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FeedbackTitle;
+        protected global::System.Web.UI.WebControls.TextBox NewPassword;
         
         /// <summary>
-        /// CustomerID control.
+        /// ConfirmNewPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CustomerID;
+        protected global::System.Web.UI.WebControls.TextBox ConfirmNewPassword;
         
         /// <summary>
-        /// Feedback control.
+        /// Submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Feedback;
-        
-        /// <summary>
-        /// ResponseTitle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ResponseTitle;
-        
-        /// <summary>
-        /// FeedbackResponse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FeedbackResponse;
+        protected global::System.Web.UI.WebControls.Button Submit;
     }
 }

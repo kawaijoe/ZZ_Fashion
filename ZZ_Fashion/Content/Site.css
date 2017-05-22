@@ -36,6 +36,10 @@ textarea {
     border-radius: 100px;
 }
 
+.top-padding {
+    margin-top: 10px;
+}
+
 /* Navbar */
 .navbar-default {
     background-color: #ffffff;

@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion.LoginPages.ProductManager {
+namespace ZZ_Fashion.LoginPages.SalesPersonnel {
     
     
-    public partial class ProductManager {
+    public partial class VoucherRedeem {
         
         /// <summary>
-        /// PageTitle control.
+        /// SerialNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder PageTitle;
+        protected global::System.Web.UI.WebControls.TextBox SerialNo;
         
         /// <summary>
-        /// MainContent control.
+        /// Redeem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button Redeem;
     }
 }

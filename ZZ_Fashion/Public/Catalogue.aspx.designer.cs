@@ -7,63 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion.LoginPages.MarketingManager {
+namespace ZZ_Fashion.Public {
     
     
-    public partial class Response {
+    public partial class Catalogue {
         
         /// <summary>
-        /// FeedbackResponseTitle control.
+        /// ClearAll control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FeedbackResponseTitle;
+        protected global::System.Web.UI.WebControls.Button ClearAll;
         
         /// <summary>
-        /// FeedbackTitle control.
+        /// MinPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FeedbackTitle;
+        protected global::System.Web.UI.WebControls.TextBox MinPrice;
         
         /// <summary>
-        /// CustomerID control.
+        /// MaxPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CustomerID;
+        protected global::System.Web.UI.WebControls.TextBox MaxPrice;
         
         /// <summary>
-        /// Feedback control.
+        /// NewArrival control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Feedback;
+        protected global::System.Web.UI.WebControls.CheckBox NewArrival;
         
         /// <summary>
-        /// ResponseTitle control.
+        /// Male control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ResponseTitle;
+        protected global::System.Web.UI.WebControls.CheckBox Male;
         
         /// <summary>
-        /// FeedbackResponse control.
+        /// Female control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FeedbackResponse;
+        protected global::System.Web.UI.WebControls.CheckBox Female;
     }
 }

@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion.LoginPages.ProductManager {
+namespace ZZ_Fashion.Public {
     
     
-    public partial class ProductManager {
+    public partial class Public {
         
         /// <summary>
         /// PageTitle control.
