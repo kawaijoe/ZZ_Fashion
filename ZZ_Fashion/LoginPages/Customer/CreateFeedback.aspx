@@ -8,7 +8,7 @@
         <tr>
             <td style="width: 192px; height: 62px;">Title of Feedback</td>
             <td style="height: 62px">
-                <asp:TextBox ID="Title" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TitleFeedBack" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -27,7 +27,7 @@
         <tr>
             <td style="width: 192px; height: 51px;"></td>
             <td style="height: 51px">
-                <asp:Button ID="Submit" runat="server" Text="Submit" />
+                <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
             </td>
         </tr>
     </table>

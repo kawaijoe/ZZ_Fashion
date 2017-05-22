@@ -13,13 +13,13 @@ namespace ZZ_Fashion.LoginPages.Customer {
     public partial class CreateFeedback {
         
         /// <summary>
-        /// Title control.
+        /// TitleFeedBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Title;
+        protected global::System.Web.UI.WebControls.TextBox TitleFeedBack;
         
         /// <summary>
         /// FeedBackMsg control.

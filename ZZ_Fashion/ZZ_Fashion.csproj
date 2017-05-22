@@ -142,7 +142,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\ZZFashion_Logo.png" />
-    <Content Include="LoginPages\Customer\BirthdayMessage.aspx" />
     <Content Include="LoginPages\Customer\ChangePassword.aspx" />
     <Content Include="LoginPages\Customer\CreateFeedback.aspx" />
     <Content Include="LoginPages\Customer\Customer.master" />
@@ -222,13 +221,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="LoginPages\Customer\BirthdayMessage.aspx.cs">
-      <DependentUpon>BirthdayMessage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginPages\Customer\BirthdayMessage.aspx.designer.cs">
-      <DependentUpon>BirthdayMessage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LoginPages\Customer\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -271,10 +263,10 @@
     <Compile Include="LoginPages\Customer\UpdateCustomer.aspx.designer.cs">
       <DependentUpon>UpdateCustomer.aspx</DependentUpon>
     </Compile>
-    <Content Include="LoginPages\Customer\ViewResponse.aspx.cs">
+    <Compile Include="LoginPages\Customer\ViewResponse.aspx.cs">
       <DependentUpon>ViewResponse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Content>
+    </Compile>
     <Compile Include="LoginPages\Customer\ViewResponse.aspx.designer.cs">
       <DependentUpon>ViewResponse.aspx</DependentUpon>
     </Compile>

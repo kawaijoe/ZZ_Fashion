@@ -13,13 +13,13 @@ namespace ZZ_Fashion.LoginPages.Customer {
     public partial class ViewResponse {
         
         /// <summary>
-        /// Title control.
+        /// TitleFeedBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Title;
+        protected global::System.Web.UI.WebControls.Label TitleFeedBack;
         
         /// <summary>
         /// FeedbackMsg control.
@@ -31,13 +31,13 @@ namespace ZZ_Fashion.LoginPages.Customer {
         protected global::System.Web.UI.WebControls.Label FeedbackMsg;
         
         /// <summary>
-        /// Response control.
+        /// Responses control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Response;
+        protected global::System.Web.UI.WebControls.Label Responses;
         
         /// <summary>
         /// AddFeedBack control.

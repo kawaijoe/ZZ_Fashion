@@ -13,13 +13,17 @@ namespace ZZ_Fashion.LoginPages.Customer
         {
             if (!Page.IsPostBack)
             {
-                Title.Text = "Male Apparel Selection Limited";
+                TitleFeedBack.Text = "Male Apparel Selection Limited";
                 FeedbackMsg.Text = "Male Selection of Clothing is too limited, please update your databse and add more clothes soon. I want to buy clothes for chinese new year. " +
                     "Also, please add more discounts, it will help you attract more cutomers.";
 
-                Response.Text = "We thank you for your Feedback and will try to imporve on our website as much as we can.";
+                Responses.Text = "We thank you for your Feedback and will try to imporve on our website as much as we can.";
             }
         }
 
+        protected void AddFeedBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateFeedback.aspx");
+        }
     }
 }

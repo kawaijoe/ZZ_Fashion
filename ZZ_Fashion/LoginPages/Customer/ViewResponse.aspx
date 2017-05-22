@@ -5,9 +5,9 @@
             <td style="width: 282px; height: 81px; font-size: x-large;" colspan="2"><strong>Feedback</strong></td>
         </tr>
         <tr>
-            <td style="width: 133px">Title of&nbsp; FeedBack:</td>
-            <td>
-                <asp:Label ID="Title" runat="server"></asp:Label>
+            <td style="width: 133px; height: 70px;">Title of&nbsp; FeedBack:</td>
+            <td style="height: 70px">
+                <asp:Label ID="TitleFeedBack" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -18,14 +18,12 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2">&nbsp;</td>
+            <td colspan="2" style="height: 42px"></td>
         </tr>
         <tr>
-            <td colspan="2">Responces:</td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <asp:Label ID="Response" runat="server"></asp:Label>
+            <td>Responces:</td>
+            <td>
+                <asp:Label ID="Responses" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -34,7 +32,11 @@
         </tr>
         <tr>
             <td colspan="2">
-                <asp:Button ID="AddFeedBack" runat="server" Text="Add Feedback" />
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:Button ID="AddFeedBack" runat="server" OnClick="AddFeedBack_Click" Text="Add Feedback" />
             </td>
         </tr>
     </table>
