@@ -2,11 +2,15 @@
 
 <asp:Content ID="Navbar" ContentPlaceHolderID="Navbar" runat="server">
     <li><a runat="server" href="~/">Home</a></li>
-    <li><a runat="server" href="~/About">About</a></li>
-    <li><a runat="server" href="~/Contact">Contact</a></li>
+    <li><a runat="server" href="~/Male">Male</a></li>
+    <li><a runat="server" href="~/Female">Female</a></li>
+    <li><a runat="server" href="~/AboutUs">About Us</a></li>
 </asp:Content>
 
 <asp:Content ID="NavbarRight" ContentPlaceHolderID="NavbarRight" runat="server">
+    <li><a runat="server" href="Profile.aspx">Profile</a></li>
+    <li><a runat="server" href="~/LoginPages/Customer/ViewResponse.aspx">FeedBack</a></li>
+    <li><a runat="server" href="~/Cart">Cart</a></li>
 </asp:Content>
 
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">

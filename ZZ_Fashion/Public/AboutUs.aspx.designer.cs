@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion.LoginPages.ProductManager {
+namespace ZZ_Fashion.Public {
 
 
-    public partial class ViewNewProduct {
+    public partial class AboutUs {
     }
 }

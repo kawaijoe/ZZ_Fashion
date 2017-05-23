@@ -5,5 +5,5 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <asp:Image ID="Image1" runat="server" ImageUrl="~/LoginPages/ProductManager/Image/Capture.PNG" Width="100%" />
 </asp:Content>
