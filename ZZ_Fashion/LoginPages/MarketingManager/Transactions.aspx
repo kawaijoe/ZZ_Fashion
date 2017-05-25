@@ -4,12 +4,14 @@
         <tr>
             <td>
                 <br />
-                <asp:Label ID="TransactionsTitle" runat="server" Text="Transactions"></asp:Label>
+                <asp:Label ID="TransactionsTitle" runat="server" Text="Transactions for the month of April"></asp:Label>
             </td>
         </tr>
         <tr>
-            <img src="images/Fake2.PNG" />
-            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+            <td>
+                <img src="images/Fake2.PNG" />
+                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+            </td>
         </tr>
     </table>
 </asp:Content>

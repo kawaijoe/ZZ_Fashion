@@ -1,6 +1,10 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/LoginPages/Login.master" AutoEventWireup="true" CodeBehind="MarketingManager.master.cs" Inherits="ZZ_Fashion.LoginPages.MarketingManager.MarketingManager" %>
 
 <asp:Content ID="Navbar" ContentPlaceHolderID="Navbar" runat="server">
+    <li><a runat="server" href="~/Feedback">View feedback</a></li>
+    <li><a runat="server" href="~/Response">Respond to feedback</a></li>
+    <li><a runat="server" href="~/Transactions">View monthly transactions</a></li>
+    <li><a runat="server" href="~/Voucher">Issue vouchers</a></li>
 </asp:Content>
 
 <asp:Content ID="NavbarRight" ContentPlaceHolderID="NavbarRight" runat="server">
