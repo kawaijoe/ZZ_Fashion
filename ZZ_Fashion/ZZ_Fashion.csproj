@@ -145,15 +145,12 @@
     <Content Include="LoginPages\Customer\ChangePassword.aspx" />
     <Content Include="LoginPages\Customer\CreateFeedback.aspx" />
     <Content Include="LoginPages\Customer\Customer.master" />
-<<<<<<< HEAD
     <Content Include="LoginPages\Customer\CustomerHomePage.aspx" />
     <Content Include="LoginPages\Customer\Profile.aspx" />
     <Content Include="LoginPages\Customer\UpdateCustomer.aspx" />
     <Content Include="LoginPages\Customer\ViewResponse.aspx" />
-=======
     <Content Include="LoginPages\MarketingManager\images\Fake.PNG" />
     <Content Include="LoginPages\MarketingManager\images\Fake2.PNG" />
->>>>>>> master
     <Content Include="LoginPages\MarketingManager\MarketingManager.master" />
     <Content Include="LoginPages\MarketingManager\Response.aspx" />
     <Content Include="LoginPages\MarketingManager\Feedback.aspx" />
