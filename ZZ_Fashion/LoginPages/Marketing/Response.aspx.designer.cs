@@ -13,13 +13,22 @@ namespace ZZ_Fashion.LoginPages.Marketing {
     public partial class Response {
         
         /// <summary>
-        /// customerInformation control.
+        /// title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label customerInformation;
+        protected global::System.Web.UI.WebControls.Label title;
+        
+        /// <summary>
+        /// meta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label meta;
         
         /// <summary>
         /// feedback control.
@@ -31,13 +40,31 @@ namespace ZZ_Fashion.LoginPages.Marketing {
         protected global::System.Web.UI.WebControls.Label feedback;
         
         /// <summary>
-        /// feedbackResponse control.
+        /// oldResponse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox feedbackResponse;
+        protected global::System.Web.UI.WebControls.Label oldResponse;
+        
+        /// <summary>
+        /// newResponse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox newResponse;
+        
+        /// <summary>
+        /// responseRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator responseRequiredValidator;
         
         /// <summary>
         /// submit control.

@@ -150,7 +150,9 @@
     <Content Include="LoginPages\Customer\Profile.aspx" />
     <Content Include="LoginPages\Customer\UpdateCustomer.aspx" />
     <Content Include="LoginPages\Customer\ViewResponse.aspx" />
+    <Content Include="LoginPages\Marketing\ErrorPage.aspx" />
     <Content Include="LoginPages\Marketing\Feedback.aspx" />
+    <Content Include="LoginPages\Marketing\IssueVoucher.aspx" />
     <Content Include="LoginPages\Marketing\Response.aspx" />
     <Content Include="LoginPages\Marketing\Transactions.aspx" />
     <Content Include="LoginPages\ProductManager\CreateProduct.aspx" />
@@ -294,6 +296,7 @@
     <Compile Include="LoginPages\Customer\ViewResponse.aspx.designer.cs">
       <DependentUpon>ViewResponse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LoginPages\Database.cs" />
     <Compile Include="LoginPages\Login.master.cs">
       <DependentUpon>Login.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -301,12 +304,26 @@
     <Compile Include="LoginPages\Login.master.designer.cs">
       <DependentUpon>Login.master</DependentUpon>
     </Compile>
+    <Compile Include="LoginPages\Marketing\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Marketing\ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LoginPages\Marketing\Feedback.aspx.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LoginPages\Marketing\Feedback.aspx.designer.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\Marketing\IssueVoucher.aspx.cs">
+      <DependentUpon>IssueVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Marketing\IssueVoucher.aspx.designer.cs">
+      <DependentUpon>IssueVoucher.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPages\Marketing\Marketing.master.cs">
       <DependentUpon>Marketing.master</DependentUpon>
