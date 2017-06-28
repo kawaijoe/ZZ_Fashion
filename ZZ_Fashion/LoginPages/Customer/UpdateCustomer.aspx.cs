@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ZZ_Fashion.LoginPages.Customer.AppCode;
+using System.Data.SqlClient;
+using System.Configuration;
+
 
 namespace ZZ_Fashion.LoginPages.Customer
 {
@@ -11,16 +15,44 @@ namespace ZZ_Fashion.LoginPages.Customer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack){
-                Name.Text = "David Chew";
-                Gender.Text = "Male";
-                BirthDate.Text = "19/06/1987";
-                PhoneNum.Text = "98748323";
-                EmailAddr.Text = "S11233343@connect.np.edu.sg";
-                ResidentialAddr.Text = "123 East Coast Road, Singapore 783920";
-                Country.Text = "Singapore";
-            }
+            if (!Page.IsPostBack)
+            {
 
+                string stringConnection = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
+
+                SqlConnection connection = new SqlConnection(stringConnection);
+
+                SqlCommand command = new SqlCommand("SELECT * FROM Customer WHERE MemberID = @MemberID", connection);
+
+                command.Parameters.AddWithValue("@MemberID", Session["LoginID"]);
+
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Name.Text = reader[1].ToString();
+                    Gender.Text = reader[2].ToString();
+                    BirthDate.Text = reader[3].ToString();
+                    ResidentialAddr.Text = reader[4].ToString();
+                    Country.Text = reader[5].ToString();
+                    PhoneNum.Text = reader[6].ToString();
+                    EmailAddr.Text = reader[7].ToString();
+                }
+
+                connection.Close();
+
+            }
+            /* Tried to use Query String, Didnt Work So Far
+             * 
+            Name.Text = Request.QueryString["Name"];
+            Gender.Text = Request.QueryString["Gender"];
+            BirthDate.Text = Request.QueryString["BirthDate"];
+            ResidentialAddr.Text = Request.QueryString["ResidentialAddr"];
+            Country.Text = Request.QueryString["Country"];
+            PhoneNum.Text = Request.QueryString["PhoneNum"];
+            EmailAddr.Text = Request.QueryString["EmailAddr"];
+            */
         }
 
         protected void ChangePass_Click(object sender, EventArgs e)
@@ -30,7 +62,36 @@ namespace ZZ_Fashion.LoginPages.Customer
 
         protected void SaveChanges_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Profile.aspx");
+            if (Page.IsValid)
+            {
+                CustomerStuff objCustomer = new CustomerStuff();
+                objCustomer.ResidentialAddr = ResidentialAddr.Text;
+                objCustomer.PhoneNum = PhoneNum.Text;
+                objCustomer.EmailAddr = EmailAddr.Text;
+                objCustomer.MemberID = Session["LoginID"].ToString();
+
+                int errorCode = objCustomer.ConfirmAdd();
+
+                if (errorCode == 0)
+                {
+                    Response.Redirect("Profile.aspx");
+                }
+                else
+                {
+                    Message.Text = "Update was unsuccessful, did you key in the right details?";
+                }
+            }
+            
+        }
+
+        protected void ValidPhoneNum_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = (args.Value.Length == 8);
+        }
+
+        protected void ValidPhoneNum_ServerValidate1(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = (args.Value.Length == 8);
         }
     }
 }

@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZZ_Fashion.LoginPages.Customer {
+namespace ZZ_Fashion.LoginPages.Marketing {
     
     
-    public partial class ViewResponse {
+    public partial class Transactions {
         
         /// <summary>
-        /// gvFeedback control.
+        /// title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvFeedback;
+        protected global::System.Web.UI.WebControls.Label title;
         
         /// <summary>
-        /// gvResponse control.
+        /// monthlyTransactions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvResponse;
+        protected global::System.Web.UI.WebControls.GridView monthlyTransactions;
         
         /// <summary>
-        /// CreateFeedback control.
+        /// submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CreateFeedback;
+        protected global::System.Web.UI.WebControls.Button submit;
     }
 }

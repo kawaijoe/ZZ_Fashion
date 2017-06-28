@@ -31,22 +31,22 @@ namespace ZZ_Fashion.LoginPages.Customer {
         protected global::System.Web.UI.WebControls.TextBox FeedBackMsg;
         
         /// <summary>
-        /// UploadPhoto control.
+        /// UploadFeedbackPhoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UploadPhoto;
+        protected global::System.Web.UI.WebControls.FileUpload UploadFeedbackPhoto;
         
         /// <summary>
-        /// ImageSrc control.
+        /// FeedbackImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ImageSrc;
+        protected global::System.Web.UI.WebControls.Image FeedbackImage;
         
         /// <summary>
         /// Submit control.
@@ -56,5 +56,14 @@ namespace ZZ_Fashion.LoginPages.Customer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Submit;
+        
+        /// <summary>
+        /// Message control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Message;
     }
 }

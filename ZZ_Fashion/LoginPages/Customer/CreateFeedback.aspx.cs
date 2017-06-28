@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ZZ_Fashion.LoginPages.Customer.AppCode;
+using System.IO;
 
 namespace ZZ_Fashion.LoginPages.Customer
 {
@@ -21,7 +23,61 @@ namespace ZZ_Fashion.LoginPages.Customer
 
         protected void Submit_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ViewResponse.aspx");
+            FeedBack objFeedBack = new FeedBack();
+            objFeedBack.MemberID = Session["LoginID"].ToString();
+            objFeedBack.Title = TitleFeedBack.Text;
+            objFeedBack.Message = FeedBackMsg.Text;
+
+            int errorCode = objFeedBack.ConfirmAdd();
+
+            if (errorCode == 0)
+            {
+                string PhotoFeedbackID = "";
+                if (UploadFeedbackPhoto.HasFile == true)
+                {
+                    // find the filename extension of the file to be uploaded
+                    string fileExtension = Path.GetExtension(UploadFeedbackPhoto.FileName);
+
+                    // find FeedbackID of this image so that it can be used as Image name
+                    PhotoFeedbackID = objFeedBack.FindFeedbackID().ToString();
+
+                    // Image name to be saved in 'Images' folder
+                    string FileSavePath = MapPath("~/Images/Feedback/" + "images-" + PhotoFeedbackID + fileExtension);
+
+                    // Save image in application 'Images' folder
+                    UploadFeedbackPhoto.SaveAs(FileSavePath);
+
+                    // to View image in Webpage using Image Control
+                    FeedbackImage.ImageUrl = "~/Images/Feedback/" + UploadFeedbackPhoto;
+
+                    objFeedBack.ImageFileName = FileSavePath;
+
+                    // use an UPDATE SQL line to update the existing feedback record to add the image name 
+                }
+
+                Response.Redirect("ViewResponse.aspx");
+            }
+            else
+            {
+                Message.Text = "Update was unsuccessful, did you key in the right details?";
+            }
+
+           
+
+
+            // HOW TO UPLOAD THE IMAGE TO THE DATABASE
+            /*
+            if (UploadButtonWasClicked == true)
+            {
+                objFeedBack.ImageFileName = "hi";
+            }
+            else
+            {
+                objFeedBack.ImageFileName = "";
+            }
+            */
+
+            
         }
     }
 }
