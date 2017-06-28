@@ -9,6 +9,7 @@
             <td style="width: 282px; height: 65px;">Old Password:</td>
             <td style="height: 65px">
                 <asp:TextBox ID="OldPass" runat="server"></asp:TextBox>
+                <asp:CustomValidator ID="IncorrectPass" runat="server" ControlToValidate="OldPass" Display="Dynamic" ErrorMessage="Incorrect password" OnServerValidate="IncorrectPass_ServerValidate" ForeColor="Red"></asp:CustomValidator>
             </td>
         </tr>
         <tr>
@@ -27,6 +28,7 @@
             <td style="height: 20px; width: 282px"></td>
             <td style="height: 20px">
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Confirm" />
+                <asp:Label ID="Message" runat="server" ForeColor="Red"></asp:Label>
             </td>
         </tr>
         <tr>

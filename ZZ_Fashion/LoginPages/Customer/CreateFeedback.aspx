@@ -20,14 +20,16 @@
         <tr>
             <td style="width: 192px; height: 74px;"></td>
             <td style="height: 74px">
-                <asp:Button ID="UploadPhoto" runat="server" Text="Upload Photo" />
-                <asp:Label ID="ImageSrc" runat="server"></asp:Label>
+                <asp:FileUpload ID="UploadFeedbackPhoto" runat="server" />
+                <br />
+                <asp:Image ID="FeedbackImage" runat="server" />
             </td>
         </tr>
         <tr>
             <td style="width: 192px; height: 51px;"></td>
             <td style="height: 51px">
                 <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
+                <asp:Label ID="Message" runat="server" ForeColor="Red"></asp:Label>
             </td>
         </tr>
     </table>

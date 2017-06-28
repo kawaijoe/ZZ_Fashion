@@ -3,9 +3,8 @@
     <p style="font-size: xx-large">
     <strong>Welcome to ZZ Fasion, Happy Shopping!</strong></p>
 <p style="font-size: xx-large">
-    <span style="font-size: medium">HAPPY BIRTHDAY David Chew. </span>
-</p>
+    &nbsp;</p>
 <p style="font-size: xx-large">
-    <span style="font-size: small">Enjoy additional 15% birthday Discount for each purchase in this month. </span>
+    <asp:Label ID="BirthdayMessage" runat="server" style="font-size: large"></asp:Label>
 </p>
 </asp:Content>

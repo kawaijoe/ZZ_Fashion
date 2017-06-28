@@ -146,6 +146,7 @@
     <Content Include="LoginPages\Customer\CreateFeedback.aspx" />
     <Content Include="LoginPages\Customer\Customer.master" />
     <Content Include="LoginPages\Customer\CustomerHomePage.aspx" />
+    <Content Include="LoginPages\Customer\Login.aspx" />
     <Content Include="LoginPages\Customer\Profile.aspx" />
     <Content Include="LoginPages\Customer\UpdateCustomer.aspx" />
     <Content Include="LoginPages\Customer\ViewResponse.aspx" />
@@ -238,6 +239,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LoginPages\Customer\AppCode\CustomerStuff.cs" />
+    <Compile Include="LoginPages\Customer\AppCode\FeedBack.cs" />
     <Compile Include="LoginPages\Customer\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -265,6 +268,13 @@
     </Compile>
     <Compile Include="LoginPages\Customer\CustomerHomePage.aspx.designer.cs">
       <DependentUpon>CustomerHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\Customer\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Customer\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPages\Customer\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>

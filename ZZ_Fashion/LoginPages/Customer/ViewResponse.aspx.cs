@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
+using ZZ_Fashion.LoginPages.Customer.AppCode;
 
 namespace ZZ_Fashion.LoginPages.Customer
 {
@@ -13,17 +17,60 @@ namespace ZZ_Fashion.LoginPages.Customer
         {
             if (!Page.IsPostBack)
             {
-                TitleFeedBack.Text = "Male Apparel Selection Limited";
-                FeedbackMsg.Text = "Male Selection of Clothing is too limited, please update your databse and add more clothes soon. I want to buy clothes for chinese new year. " +
-                    "Also, please add more discounts, it will help you attract more cutomers.";
-
-                Responses.Text = "We thank you for your Feedback and will try to imporve on our website as much as we can.";
+                displayFeedbackList();
             }
         }
 
         protected void AddFeedBack_Click(object sender, EventArgs e)
         {
             Response.Redirect("CreateFeedback.aspx");
+        }
+
+        protected void gvFeedback_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedfeedbackID = Convert.ToInt32(gvFeedback.SelectedDataKey[0]);
+
+            FeedBack objfeedback = new FeedBack();
+
+            DataSet result = new DataSet();
+
+
+
+            objfeedback.FeedbackID = selectedfeedbackID;
+
+            gvResponse.DataSource = result.Tables["FeedBack"];
+
+            gvResponse.DataBind();
+
+            
+        }
+
+        public void displayFeedbackList()
+        {
+
+            string stringConnection = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
+
+            SqlConnection connection = new SqlConnection(stringConnection);
+
+            SqlCommand command = new SqlCommand("select ResponseID, Response.FeedbackID, Response.MemberID, StaffID, Response.DateTimePosted, Response.Text, Title, Feedback.Text as 'Feedback Text' from Response INNER JOIN Feedback on Response.FeedbackID = Feedback.FeedbackID WHERE MemberID = @MemberID ;", connection);
+
+            command.Parameters.AddWithValue("@MemberID", Session["loginID"]);
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+            DataSet result = new DataSet();
+
+            connection.Open();
+
+            dataAdapter.Fill(result, "FeedBack");
+
+            connection.Close();
+
+            gvFeedback.DataSource = result.Tables["FeedBack"];
+
+            gvFeedback.DataBind();
+
+     
         }
     }
 }
