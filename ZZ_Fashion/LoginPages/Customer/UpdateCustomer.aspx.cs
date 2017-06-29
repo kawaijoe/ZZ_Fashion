@@ -31,7 +31,7 @@ namespace ZZ_Fashion.LoginPages.Customer
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Name.Text = reader[1].ToString();
+                    NameLabel.Text = reader[1].ToString();
                     Gender.Text = reader[2].ToString();
                     BirthDate.Text = reader[3].ToString();
                     ResidentialAddr.Text = reader[4].ToString();

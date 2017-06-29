@@ -16,12 +16,14 @@
             <td style="width: 282px; height: 79px;">New Password:</td>
             <td style="height: 79px">
                 <asp:TextBox ID="NewPass" runat="server"></asp:TextBox>
+                <asp:CustomValidator ID="IdenticalPass" runat="server" Display="Dynamic" ErrorMessage="New Password cannot be Identical to Old Password" ForeColor="Red" OnServerValidate="IdenticalPass_ServerValidate"></asp:CustomValidator>
             </td>
         </tr>
         <tr>
             <td style="width: 282px; height: 76px;">Confirm New Password</td>
             <td style="height: 76px">
                 <asp:TextBox ID="ConfirmNewPass" runat="server"></asp:TextBox>
+                <asp:CustomValidator ID="IdenticalNewPass" runat="server" Display="Dynamic" ErrorMessage="New Passwords in both fields must be identical" ForeColor="Red" OnServerValidate="IdenticalNewPass_ServerValidate"></asp:CustomValidator>
             </td>
         </tr>
         <tr>
