@@ -13,7 +13,7 @@ namespace ZZ_Fashion.LoginPages.Marketing {
             if (!IsPostBack) {
                 Database.INSTANCE.Load(customerFeedback, "SELECT * FROM Feedback ORDER BY FeedbackDate DESC", e => title.Text = "Failed to load feedback");
             }
-        }
+        }//cunt
 
         protected void OnBound(object sender, GridViewRowEventArgs args) {
             if (args.Row.RowType == DataControlRowType.DataRow) {
