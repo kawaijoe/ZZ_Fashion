@@ -17,9 +17,6 @@ namespace ZZ_Fashion.LoginPages {
         }
 
 
-        public void Load(GridView grid, string query) {
-            Load(grid, query, exception => throw exception);
-        }
         public void Load(GridView grid, string query, Action<SqlException> handle) {
             Try(connection => {
                 var adapter = new SqlDataAdapter(new SqlCommand(query, connection));
@@ -30,10 +27,6 @@ namespace ZZ_Fashion.LoginPages {
             }, handle);
         }
 
-
-        public void Insert(string statement, Action<SqlCommand> execute) {
-            Insert(statement, execute, exception => throw exception);
-        }
         public void Insert(string statement, Action<SqlCommand> execute, Action<SqlException> handle) {
             Try(connection => execute(new SqlCommand(statement, connection)), handle);      
         }
