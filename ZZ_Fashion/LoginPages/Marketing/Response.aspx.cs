@@ -6,45 +6,42 @@ namespace ZZ_Fashion.LoginPages.Marketing {
     public partial class Response : System.Web.UI.Page {
 
         protected void Page_Load(object sender, EventArgs args) {
-            IfFeedbackPresentOrElse(LoadFeedback, () => Response.Redirect("./ErrorPage.aspx"));
-        }
+            if (!IsPostBack) {
+                ViewState["feedbackID"] = Session["feedbackID"];
+                ViewState["customerID"] = Session["customerID"];
 
-        protected void IfFeedbackPresentOrElse(Action<GridViewRow> ifPresent, Action orElse) {
-            GridView grid = null;
-            if (PreviousPage != null && (grid = (GridView) PreviousPage.FindControl("customerFeedback")) != null && grid.SelectedRow != null) {
-                ifPresent(grid.SelectedRow);
-
-            } else {
-                orElse();
+                meta.Text = "Feedback ID: " + Session["feedbackId"] + "By: " + Session["name"] + "On: " + Session["date"];
+                feedback.Text = Session["feedback"].ToString();
             }
         }
-
-        protected void LoadFeedback(GridViewRow row) {
-            meta.Text = "Feedback ID: " + row.Cells[0].Text + "By: " + row.Cells[1].Text + "On: " + row.Cells[2].Text;
-            feedback.Text = row.Cells[3].Text;
-            oldResponse.Text = row.Cells[4].Text;
-        }
-
 
         protected void OnSubmit(object sender, EventArgs args) {
             submit.Enabled = false;
             submit.UseSubmitBehavior = false;
 
-            IfFeedbackPresentOrElse(row => {
-                Database.INSTANCE.Insert("INSERT INTO Feedback (Response) VALUES(%feedbaackResponse) WHERE id = %feedbackID;", command => {
-                    command.Parameters.AddWithValue("%feedbackResponse", newResponse.Text);
-                    command.Parameters.AddWithValue("%feedbackID", row.RowIndex);
+            Database.INSTANCE.Insert(
+                "INSERT INTO Response (FeedbackID, MemberID, StaffID, DateTimePosted, Text) VALUES (%id, %customer, %staff, %posted, %text)", 
+                command => {
+                    command.Parameters.AddWithValue("%id", Convert.ToInt32(ViewState["feedbackID"]));
+                    command.Parameters.AddWithValue("%customer", Convert.ToInt32(ViewState["customerID"]));
+                    command.Parameters.AddWithValue("%staff", Convert.ToInt32(Session["staffID"]));
+                    command.Parameters.AddWithValue("%posted", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+                    command.Parameters.AddWithValue("%text", newResponse.Text);
 
-                if (command.ExecuteNonQuery() == 1) {
-                    oldResponse.Text = newResponse.Text;
-                    newResponse.Text = "";
-                }
+                    if (command.ExecuteNonQuery() == 1) {
+                        title.Text = "Your response has been saved";
 
-                }, exception => Response.Redirect("./ErrorPage.aspx"));
-            }, () => Response.Redirect("./ErrorPage.aspx"));
+                        oldResponse.Text = newResponse.Text;
+                        newResponse.Text = "";
 
-            submit.Enabled = true;
-            submit.UseSubmitBehavior = true;
+                    } else {
+                        title.Text = "Failed to save response, please try again";
+
+                        submit.Enabled = true;
+                        submit.UseSubmitBehavior = true;
+                    }
+
+            }, exception => Response.Redirect("./ErrorPage.aspx"));
         }
 
     }

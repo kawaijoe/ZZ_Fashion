@@ -56,5 +56,29 @@ namespace ZZ_Fashion.LoginPages.Customer
 
             args.IsValid = (args.Value == tryPassword);
         }
+
+        protected void IdenticalPass_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if(OldPass.Text != NewPass.Text)
+            {
+                args.IsValid = true;
+            }
+            else
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void IdenticalNewPass_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if(NewPass.Text == ConfirmNewPass.Text)
+            {
+                args.IsValid = true;
+            }
+            else
+            {
+                args.IsValid = false;
+            }
+        }
     }
 }

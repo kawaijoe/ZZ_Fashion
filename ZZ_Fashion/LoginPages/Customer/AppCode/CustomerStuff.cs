@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace ZZ_Fashion.LoginPages.Customer.AppCode
 {
@@ -67,6 +68,66 @@ namespace ZZ_Fashion.LoginPages.Customer.AppCode
             return 0;
         }
 
+        public int checkEmail()
+        {
+            string stringConnection = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
 
+            SqlConnection connection = new SqlConnection(stringConnection);
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Customer WHERE MEmailAddr = @EmailAddr and MemberID != @MemberID", connection);
+
+            command.Parameters.AddWithValue("@EmailAddr", EmailAddr);
+            command.Parameters.AddWithValue("@MemberID", MemberID);
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+            DataSet result = new DataSet();
+
+            connection.Open();
+
+            dataAdapter.Fill(result, "UniqueEmail");
+
+            connection.Close();
+
+            if(result.Tables["UniqueEmail"].Rows.Count > 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+
+        public int checkPhoneNum()
+        {
+            string stringConnection = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
+
+            SqlConnection connection = new SqlConnection(stringConnection);
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Customer WHERE MTelNo = @PhoneNum and MemberID != @MemberID", connection);
+
+            command.Parameters.AddWithValue("@PhoneNum", PhoneNum);
+            command.Parameters.AddWithValue("@MemberID", MemberID);
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+            DataSet result = new DataSet();
+
+            connection.Open();
+
+            dataAdapter.Fill(result, "UniquePhoneNum");
+
+            connection.Close();
+
+            if (result.Tables["UniquePhoneNum"].Rows.Count > 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
     }
 }

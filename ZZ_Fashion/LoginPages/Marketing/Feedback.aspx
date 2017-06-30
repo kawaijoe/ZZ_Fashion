@@ -8,8 +8,7 @@
     <table style="width: 100%;">
         <tr>
             <td>
-                <asp:GridView ID="customerFeedback" runat="server" AllowPaging="True" OnRowDataBound="OnBound"></asp:GridView>
-                <asp:Button ID="submit" runat="server" style="display:none;" OnClick="OnClick" OnClientClick="UpdateControl();" PostBackUrl="./Response.aspx"/>
+                <asp:GridView ID="customerFeedback" runat="server" AllowPaging="True" OnRowDataBound="OnBound" OnSelectedIndexChanged="OnSelect"></asp:GridView>
             </td>
         </tr>
     </table>

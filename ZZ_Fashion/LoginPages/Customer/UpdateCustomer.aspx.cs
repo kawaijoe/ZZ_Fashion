@@ -31,7 +31,7 @@ namespace ZZ_Fashion.LoginPages.Customer
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Name.Text = reader[1].ToString();
+                    NameLabel.Text = reader[1].ToString();
                     Gender.Text = reader[2].ToString();
                     BirthDate.Text = reader[3].ToString();
                     ResidentialAddr.Text = reader[4].ToString();
@@ -89,9 +89,42 @@ namespace ZZ_Fashion.LoginPages.Customer
             args.IsValid = (args.Value.Length == 8);
         }
 
-        protected void ValidPhoneNum_ServerValidate1(object source, ServerValidateEventArgs args)
+        protected void UniqueEmail_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            args.IsValid = (args.Value.Length == 8);
+            CustomerStuff objCustomer = new CustomerStuff();
+            objCustomer.EmailAddr = EmailAddr.Text;
+            objCustomer.MemberID = Session["LoginID"].ToString();
+            if(objCustomer.checkEmail() == 1)
+            {
+                args.IsValid = true;
+            }
+            else if(EmailAddr.Text == "")
+            {
+                args.IsValid = true;
+            }
+            else
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void UniquePhoneNum_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            CustomerStuff objCustomer = new CustomerStuff();
+            objCustomer.PhoneNum = PhoneNum.Text;
+            objCustomer.MemberID = Session["LoginID"].ToString();
+            if (objCustomer.checkPhoneNum() == 1)
+            {
+                args.IsValid = true;
+            }
+            else if (PhoneNum.Text == "")
+            {
+                args.IsValid = true;
+            }
+            else
+            {
+                args.IsValid = false;
+            }
         }
     }
 }

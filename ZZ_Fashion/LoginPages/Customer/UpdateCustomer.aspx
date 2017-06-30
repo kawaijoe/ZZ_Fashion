@@ -8,7 +8,7 @@
         <tr>
             <td style="width: 282px; height: 55px">Name:</td>
             <td style="height: 55px">
-                <asp:TextBox ID="Name" runat="server"></asp:TextBox>
+                <asp:Label ID="NameLabel" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -28,6 +28,7 @@
             <td style="height: 70px">
                 <asp:TextBox ID="EmailAddr" runat="server" TextMode="Email"></asp:TextBox>
                 <asp:RegularExpressionValidator ID="ValidEmail" runat="server" ControlToValidate="EmailAddr" Display="Dynamic" ErrorMessage="Please Enter Valid Email Address" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                <asp:CustomValidator ID="UniqueEmail" runat="server" Display="Dynamic" ErrorMessage="Please Enter a Unique Email address" ForeColor="Red" OnServerValidate="UniqueEmail_ServerValidate"></asp:CustomValidator>
             </td>
         </tr>
         <tr>
@@ -40,7 +41,8 @@
             <td style="width: 282px; height: 69px">Phone Number:</td>
             <td style="height: 69px">
                 <asp:TextBox ID="PhoneNum" runat="server" TextMode="Phone"></asp:TextBox>
-                <asp:CustomValidator ID="ValidPhoneNum" runat="server" ControlToValidate="PhoneNum" Display="Dynamic" ErrorMessage="Please Enter Valid Phone Number" ForeColor="Red" OnServerValidate="ValidPhoneNum_ServerValidate1"></asp:CustomValidator>
+                <asp:CustomValidator ID="ValidPhoneNum" runat="server" ControlToValidate="PhoneNum" Display="Dynamic" ErrorMessage="Please Enter Valid Phone Number" ForeColor="Red" OnServerValidate="ValidPhoneNum_ServerValidate"></asp:CustomValidator>
+                <asp:CustomValidator ID="UniquePhoneNum" runat="server" Display="Dynamic" ErrorMessage="Please Enter a Unique Phone Number" ForeColor="Red" OnServerValidate="UniquePhoneNum_ServerValidate"></asp:CustomValidator>
             </td>
         </tr>
         <tr>

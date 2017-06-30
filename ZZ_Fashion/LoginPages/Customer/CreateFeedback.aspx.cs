@@ -62,20 +62,6 @@ namespace ZZ_Fashion.LoginPages.Customer
                 Message.Text = "Update was unsuccessful, did you key in the right details?";
             }
 
-           
-
-
-            // HOW TO UPLOAD THE IMAGE TO THE DATABASE
-            /*
-            if (UploadButtonWasClicked == true)
-            {
-                objFeedBack.ImageFileName = "hi";
-            }
-            else
-            {
-                objFeedBack.ImageFileName = "";
-            }
-            */
 
             
         }

@@ -13,13 +13,13 @@ namespace ZZ_Fashion.LoginPages.Customer {
     public partial class UpdateCustomer {
         
         /// <summary>
-        /// Name control.
+        /// NameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Name;
+        protected global::System.Web.UI.WebControls.Label NameLabel;
         
         /// <summary>
         /// Gender control.
@@ -58,6 +58,15 @@ namespace ZZ_Fashion.LoginPages.Customer {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator ValidEmail;
         
         /// <summary>
+        /// UniqueEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator UniqueEmail;
+        
+        /// <summary>
         /// ChangePass control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace ZZ_Fashion.LoginPages.Customer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator ValidPhoneNum;
+        
+        /// <summary>
+        /// UniquePhoneNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator UniquePhoneNum;
         
         /// <summary>
         /// ResidentialAddr control.

@@ -40,6 +40,15 @@ namespace ZZ_Fashion.LoginPages.Customer {
         protected global::System.Web.UI.WebControls.TextBox NewPass;
         
         /// <summary>
+        /// IdenticalPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator IdenticalPass;
+        
+        /// <summary>
         /// ConfirmNewPass control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace ZZ_Fashion.LoginPages.Customer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ConfirmNewPass;
+        
+        /// <summary>
+        /// IdenticalNewPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator IdenticalNewPass;
         
         /// <summary>
         /// Button1 control.
