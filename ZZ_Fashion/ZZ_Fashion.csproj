@@ -388,6 +388,7 @@
     <Compile Include="LoginPages\SalesPersonnel\CreateCustomer.aspx.designer.cs">
       <DependentUpon>CreateCustomer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LoginPages\SalesPersonnel\Customer.cs" />
     <Compile Include="LoginPages\SalesPersonnel\SalesPersonnel.master.cs">
       <DependentUpon>SalesPersonnel.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

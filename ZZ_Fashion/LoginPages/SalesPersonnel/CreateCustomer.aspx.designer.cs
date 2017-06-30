@@ -31,22 +31,22 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         protected global::System.Web.UI.WebControls.TextBox Name;
         
         /// <summary>
-        /// Male control.
+        /// M control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Male;
+        protected global::System.Web.UI.WebControls.RadioButton M;
         
         /// <summary>
-        /// Female control.
+        /// F control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Female;
+        protected global::System.Web.UI.WebControls.RadioButton F;
         
         /// <summary>
         /// DOB control.
@@ -85,6 +85,15 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         protected global::System.Web.UI.WebControls.TextBox Address;
         
         /// <summary>
+        /// ddlCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCountry;
+        
+        /// <summary>
         /// Add control.
         /// </summary>
         /// <remarks>
@@ -92,5 +101,14 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Add;
+        
+        /// <summary>
+        /// lblmsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmsg;
     }
 }

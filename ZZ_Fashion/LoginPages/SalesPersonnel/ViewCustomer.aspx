@@ -15,16 +15,8 @@
         </tr>
         <tr>
             <td style="width: 131px">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 131px">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="width: 131px">&nbsp;</td>
             <td>
-                <asp:ListBox ID="CustomerList" runat="server" Height="240px" Width="173px"></asp:ListBox>
+                <asp:Button ID="searching" runat="server" Text="Search" />
             </td>
         </tr>
         <tr>
@@ -33,7 +25,20 @@
         </tr>
         <tr>
             <td style="width: 131px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:GridView ID="cusList" runat="server" AutoGenerateColumns="False" Height="184px" Width="752px">
+                    <Columns>
+                        <asp:BoundField DataField="MemberID" HeaderText="ID" />
+                        <asp:BoundField DataField="MName" HeaderText="Name" />
+                        <asp:BoundField DataField="MGender" HeaderText="Gender" />
+                        <asp:BoundField DataField="MBirthDate" HeaderText="BirthDate" />
+                        <asp:BoundField DataField="MAddress" HeaderText="Residential Address" />
+                        <asp:BoundField DataField="MCountry" HeaderText="Country" />
+                        <asp:BoundField DataField="MTelNo" HeaderText="Tel No." />
+                        <asp:BoundField DataField="MEmailAddr" HeaderText="Email Address" />
+                    </Columns>
+                </asp:GridView>
+            </td>
         </tr>
         <tr>
             <td style="width: 131px">&nbsp;</td>

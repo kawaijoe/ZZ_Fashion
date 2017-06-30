@@ -21,10 +21,8 @@
         <tr>
             <td style="width: 134px">Gender:</td>
             <td>
-                <asp:CheckBox ID="Male" runat="server" />
-                <a>Male</a>                
-                <asp:CheckBox ID="Female" runat="server" />
-                <a>Female</a>                
+                <asp:RadioButton ID="M" runat="server" GroupName="Gender" OnCheckedChanged="RadioButton1_CheckedChanged" />
+                <asp:RadioButton ID="F" runat="server" GroupName="Gender" />
             </td>
         </tr>
         <tr>
@@ -52,9 +50,17 @@
             </td>
         </tr>
         <tr>
+            <td style="height: 24px; width: 134px">Country</td>
+            <td style="height: 24px">
+                <asp:DropDownList ID="ddlCountry" runat="server">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
             <td style="width: 134px">&nbsp;</td>
             <td>
-                <asp:Button ID="Add" runat="server" Text="ADD" />
+                <asp:Button ID="Add" runat="server" Text="ADD" OnClick="Add_Click" />
+                <asp:Label ID="lblmsg" runat="server"></asp:Label>
             </td>
         </tr>
     </table>

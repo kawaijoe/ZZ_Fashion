@@ -22,12 +22,21 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         protected global::System.Web.UI.WebControls.TextBox Search;
         
         /// <summary>
-        /// CustomerList control.
+        /// searching control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox CustomerList;
+        protected global::System.Web.UI.WebControls.Button searching;
+        
+        /// <summary>
+        /// cusList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView cusList;
     }
 }
