@@ -13,19 +13,24 @@ namespace ZZ_Fashion.LoginPages.Marketing {
             if (!IsPostBack) {
                 Database.INSTANCE.Load(customerFeedback, "SELECT * FROM Feedback ORDER BY FeedbackDate DESC", e => title.Text = "Failed to load feedback");
             }
-        }//cunt
+        }
 
         protected void OnBound(object sender, GridViewRowEventArgs args) {
             if (args.Row.RowType == DataControlRowType.DataRow) {
                 args.Row.ToolTip = "Click to select me!";
-                args.Row.Attributes["onclick"] =
-                    "<script language='javascript' type='text/javascript'>" +
-                    "   function PerformClick() {" +
-                    "       document.getElementById('<%=submit.ClientID %>').click();" +
-                    "   }" +
-                    "</script>";
             }
         }
 
+        protected void OnSelect(object sender, EventArgs args) {
+            var row = customerFeedback.SelectedRow;
+
+            Session["feedbackID"] = row.Cells[0].ToString();
+            Session["customerID"] = row.Cells[1].ToString();
+            Session["date"] = row.Cells[2].ToString();
+            Session["title"] = row.Cells[3].ToString();
+            Session["text"] = row.Cells[4].ToString();
+
+            Response.Redirect("./Response.aspx");
+        }
     }
 }
