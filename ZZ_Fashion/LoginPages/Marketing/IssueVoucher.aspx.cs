@@ -28,7 +28,7 @@ namespace ZZ_Fashion.LoginPages.Marketing {
                     command.Parameters.AddWithValue("%id", Convert.ToInt32(ViewState["customerID"]));
                     command.Parameters.AddWithValue("%voucherAmount", amount);
                     //TODO
-                });
+                }, exception => { //TODO });
         }
 
         protected decimal DetermineVouchers(double spending) {
