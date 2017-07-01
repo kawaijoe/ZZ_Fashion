@@ -29,19 +29,27 @@
         <div class="col-md-8">
             <asp:TextBox ID="Price" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter a price!" Display="Dynamic" ControlToValidate="Price"></asp:RequiredFieldValidator>
-            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Price has to be a number more then 0!" ControlToValidate="Price" Operator="GreaterThan" ValueToCompare="0" Type="Currency"></asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Price has to be a number more than 0!" ControlToValidate="Price" Operator="GreaterThan" ValueToCompare="0" Type="Currency"></asp:CompareValidator>
         </div>
     </div>
     <div class="row top-padding">
         <div class="col-md-4" align="right">Effective Date:</div>
         <div class="col-md-8">
             <asp:Calendar ID="EffectiveDate" runat="server"></asp:Calendar>
+            <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="You cannot select a date before today!" Display="Dynamic" OnServerValidate="CalendarValidate"></asp:CustomValidator>
+            <asp:CustomValidator ID="CustomValidator3" runat="server" ErrorMessage="You cannot select a date before today!" Display="Dynamic" ClientValidationFunction="CalendarValidate"></asp:CustomValidator>
         </div>
     </div>
     <div class="row top-padding">
         <div class="col-md-4" align="right"></div>
         <div class="col-md-8">
-            <asp:Button ID="Submit" runat="server" Text="Submit" />
+            <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
+        </div>
+    </div>
+    <div class="row top-padding">
+        <div class="col-md-4" align="right"></div>
+        <div class="col-md-8">
+            <asp:Label ID="status" runat="server" Text=""></asp:Label>
         </div>
     </div>
 </asp:Content>
