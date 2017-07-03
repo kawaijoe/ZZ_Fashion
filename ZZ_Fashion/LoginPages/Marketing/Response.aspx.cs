@@ -7,11 +7,11 @@ namespace ZZ_Fashion.LoginPages.Marketing {
 
         protected void Page_Load(object sender, EventArgs args) {
             if (!IsPostBack) {
-                ViewState["feedbackID"] = Session["feedbackID"];
-                ViewState["customerID"] = Session["customerID"];
+                ViewState["feedbackID"] = Session["feedback-ID"];
+                ViewState["memberID"] = Session["feedback-memberID"];
 
-                meta.Text = "Feedback ID: " + Session["feedbackId"] + "By: " + Session["name"] + "On: " + Session["date"];
-                feedback.Text = Session["feedback"].ToString();
+                meta.Text = "Feedback ID: " + Session["feedback-ID"] + "By: " + Session["feedback-memberID"] + "On: " + Session["feedback-date"];
+                feedback.Text = Session["feedback-text"].ToString();
             }
         }
 
@@ -20,10 +20,10 @@ namespace ZZ_Fashion.LoginPages.Marketing {
             submit.UseSubmitBehavior = false;
 
             Database.INSTANCE.Insert(
-                "INSERT INTO Response (FeedbackID, MemberID, StaffID, DateTimePosted, Text) VALUES (%id, %customer, %staff, %posted, %text)", 
+                "INSERT INTO Response (FeedbackID, MemberID, StaffID, DateTimePosted, Text) VALUES (%id, %member, %staff, %posted, %text)", 
                 command => {
                     command.Parameters.AddWithValue("%id", Convert.ToInt32(ViewState["feedbackID"]));
-                    command.Parameters.AddWithValue("%customer", Convert.ToInt32(ViewState["customerID"]));
+                    command.Parameters.AddWithValue("%member", Convert.ToInt32(ViewState["memberID"]));
                     command.Parameters.AddWithValue("%staff", Convert.ToInt32(Session["staffID"]));
                     command.Parameters.AddWithValue("%posted", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
                     command.Parameters.AddWithValue("%text", newResponse.Text);
