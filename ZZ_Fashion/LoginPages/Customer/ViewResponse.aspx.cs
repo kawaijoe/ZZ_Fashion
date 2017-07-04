@@ -52,7 +52,7 @@ namespace ZZ_Fashion.LoginPages.Customer
 
             SqlConnection connection = new SqlConnection(stringConnection);
 
-            SqlCommand command = new SqlCommand("select ResponseID, Response.FeedbackID, Response.MemberID, StaffID, Response.DateTimePosted, Response.Text, Title, Feedback.Text as 'Feedback Text' from Response INNER JOIN Feedback on Response.FeedbackID = Feedback.FeedbackID WHERE MemberID = @MemberID ;", connection);
+            SqlCommand command = new SqlCommand("select ResponseID, Response.FeedbackID, Response.MemberID, StaffID, Response.DateTimePosted, Response.Text, Title, Feedback.Text as 'Feedback Text' from Response INNER JOIN Feedback on Response.FeedbackID = Feedback.FeedbackID WHERE Response.MemberID = @MemberID ;", connection);
 
             command.Parameters.AddWithValue("@MemberID", Session["loginID"]);
 
