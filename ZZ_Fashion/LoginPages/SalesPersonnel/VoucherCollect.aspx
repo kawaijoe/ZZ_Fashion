@@ -7,13 +7,13 @@
             <td>VOURCHER COLLECT</td>
         </tr>
         <tr>
-            <td style="width: 99px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="width: 99px; height: 22px;"></td>
+            <td style="height: 22px"></td>
         </tr>
         <tr>
             <td style="width: 99px">Serial Number:</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server">M000000</asp:TextBox>
             </td>
         </tr>
         <tr>

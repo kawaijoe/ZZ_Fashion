@@ -14,6 +14,10 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                displayCustomers();
+            }
 
         }
         protected void displayCustomers ()
@@ -21,6 +25,32 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
             string strconn = ConfigurationManager.ConnectionStrings["ZZFashionCRM"].ToString();
 
             SqlConnection conn = new SqlConnection();
+
+            SqlCommand cmd = new SqlCommand("SELECT MemberID, MName, MGender, MBirthDate, MAddress, MCountry, MTelNo, MEmailAddr FROM Customer", conn);
+
+            SqlDataAdapter dispCus = new SqlDataAdapter(cmd);
+
+            DataSet result = new DataSet();
+
+            conn.Open();
+
+            dispCus.Fill(result, "Customer");
+
+            conn.Close();
+
+            cusList.DataSource = result.Tables["Customer"];
+
+            cusList.DataBind();
+
+            if (result.Tables["Customer"].Rows.Count > 0)
+            {
+                lblView.Text = result.Tables["Customer"].Rows.Count.ToString();
+            }
+            else
+            {
+                lblView.Text = "No Customer Record";
+            }
+            
         }
     }
 }

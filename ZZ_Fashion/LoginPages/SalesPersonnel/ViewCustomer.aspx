@@ -41,8 +41,10 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 131px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="width: 131px; height: 22px;"></td>
+            <td style="height: 22px">
+                <asp:Label ID="lblView" runat="server"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td style="width: 131px">&nbsp;</td>

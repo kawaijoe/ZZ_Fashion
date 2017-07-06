@@ -13,5 +13,10 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
         {
 
         }
+
+        protected void redeem(object sender, EventArgs e)
+        {
+
+        }
     }
 }
