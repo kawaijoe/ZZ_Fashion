@@ -24,11 +24,11 @@ namespace ZZ_Fashion.LoginPages.Marketing {
         protected void OnSelect(object sender, EventArgs args) {
             var row = customerFeedback.SelectedRow;
 
-            Session["feedbackID"] = row.Cells[0].ToString();
-            Session["customerID"] = row.Cells[1].ToString();
-            Session["date"] = row.Cells[2].ToString();
-            Session["title"] = row.Cells[3].ToString();
-            Session["text"] = row.Cells[4].ToString();
+            Session["feedback-ID"] = row.Cells[0].ToString();
+            Session["feedback-memberID"] = row.Cells[1].ToString();
+            Session["feedback-date"] = row.Cells[2].ToString();
+            Session["feedback-title"] = row.Cells[3].ToString();
+            Session["feedback-text"] = row.Cells[4].ToString();
 
             Response.Redirect("./Response.aspx");
         }

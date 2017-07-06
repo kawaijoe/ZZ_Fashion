@@ -45,6 +45,7 @@ namespace ZZ_Fashion.LoginPages.Customer
 
         }
 
+        
         protected void Edit_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
@@ -63,5 +64,6 @@ namespace ZZ_Fashion.LoginPages.Customer
                 Response.Redirect("UpdateCustomer.aspx?" + StringValues);
             }
         }
+        
     }
 }

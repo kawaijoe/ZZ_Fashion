@@ -71,7 +71,7 @@ namespace ZZ_Fashion.LoginPages.Customer.AppCode
 
             SqlConnection connection = new SqlConnection(stringConnection);
 
-            SqlCommand command = new SqlCommand("SELECT ResponseID, Response.FeedbackID, Response.MemberID, StaffID, Response.DateTimePosted, Response.Text, Title, Feedback.Text as 'Feedback Text' from Response INNER JOIN Feedback on Response.FeedbackID = Feedback.FeedbackID WHERE FeedbackID = @selectedFeedbackID, StaffID IS NOT NULL;", connection);
+            SqlCommand command = new SqlCommand("SELECT ResponseID, Response.FeedbackID, Response.MemberID, StaffID, Response.DateTimePosted, Response.Text, Title, Feedback.Text as 'Feedback Text' from Response INNER JOIN Feedback on Response.FeedbackID = Feedback.FeedbackID WHERE Response.FeedbackID = @selectedFeedbackID, StaffID IS NOT NULL;", connection);
 
             command.Parameters.AddWithValue("@feedbackID", FeedbackID);
 

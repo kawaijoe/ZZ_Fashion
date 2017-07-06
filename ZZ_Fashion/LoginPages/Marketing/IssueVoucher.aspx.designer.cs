@@ -13,22 +13,22 @@ namespace ZZ_Fashion.LoginPages.Marketing {
     public partial class IssueVoucher {
         
         /// <summary>
-        /// Label1 control.
+        /// title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label title;
         
         /// <summary>
-        /// Label2 control.
+        /// amount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label amount;
         
         /// <summary>
         /// issue control.
