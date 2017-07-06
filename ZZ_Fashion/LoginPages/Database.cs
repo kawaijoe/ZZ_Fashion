@@ -40,7 +40,7 @@ namespace ZZ_Fashion.LoginPages {
                 }
 
             } catch (SqlException e) {
-                throw;
+                handle(e);
             }
         }
 
