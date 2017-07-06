@@ -11,7 +11,7 @@ namespace ZZ_Fashion.LoginPages.Marketing {
 
         protected void Page_Load(object sender, EventArgs args) {
             if (!IsPostBack) {
-                Database.INSTANCE.Load(customerFeedback, "SELECT * FROM Feedback ORDER BY FeedbackDate DESC", e => title.Text = "Failed to load feedback");
+                Database.INSTANCE.Load(customerFeedback, "SELECT * FROM Feedback ORDER BY DateTimePosted DESC", e => title.Text = "Failed to load feedback");
             }
         }
 

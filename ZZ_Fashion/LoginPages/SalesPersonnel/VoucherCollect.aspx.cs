@@ -19,11 +19,13 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
 
         protected void voucherCheck(object sender, EventArgs e)
         {
-            string strnConn = ConfigurationManager.ConnectionStrings["ZZFashionCRM"].ToString();
+            string strnConn = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection();
 
-            SqlConnection cmd = new SqlCommand("UPDATE CashVoucher SET Status = 1 WHERE Status = 0", conn);
+            //SqlConnection cmd = new SqlCommand("UPDATE CashVoucher SET Status = 1 WHERE Status = 0", conn);
+
+
 
 
 

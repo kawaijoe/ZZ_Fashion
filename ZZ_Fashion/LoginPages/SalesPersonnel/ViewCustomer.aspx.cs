@@ -22,9 +22,9 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
         }
         protected void displayCustomers ()
         {
-            string strconn = ConfigurationManager.ConnectionStrings["ZZFashionCRM"].ToString();
+            string strconn = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
 
-            SqlConnection conn = new SqlConnection();
+            SqlConnection conn = new SqlConnection(strconn);
 
             SqlCommand cmd = new SqlCommand("SELECT MemberID, MName, MGender, MBirthDate, MAddress, MCountry, MTelNo, MEmailAddr FROM Customer", conn);
 

@@ -9,7 +9,7 @@
         <tr>
             <td style="width: 134px">Membership ID:</td>
             <td>
-                <asp:TextBox ID="ID" runat="server"></asp:TextBox>
+                <asp:TextBox ID="ID" runat="server">M00000001</asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -21,7 +21,7 @@
         <tr>
             <td style="width: 134px">Gender:</td>
             <td>
-                <asp:RadioButton ID="M" runat="server" GroupName="Gender" OnCheckedChanged="RadioButton1_CheckedChanged" />
+                <asp:RadioButton ID="M" runat="server" GroupName="Gender" />
                 <asp:RadioButton ID="F" runat="server" GroupName="Gender" />
             </td>
         </tr>

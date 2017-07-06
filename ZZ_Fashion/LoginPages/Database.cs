@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 namespace ZZ_Fashion.LoginPages {
     public class Database {
 
-        public static Database INSTANCE { get; } = new Database(ConfigurationManager.ConnectionStrings["ZZFashionConnection"].ToString());
+        public static Database INSTANCE { get; } = new Database(ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString());
 
 
         private string url;
@@ -40,7 +40,7 @@ namespace ZZ_Fashion.LoginPages {
                 }
 
             } catch (SqlException e) {
-                handle(e);
+                throw;
             }
         }
 

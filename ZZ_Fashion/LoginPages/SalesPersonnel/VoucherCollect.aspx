@@ -13,7 +13,7 @@
         <tr>
             <td style="width: 99px">Serial Number:</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server">M000000</asp:TextBox>
+                <asp:TextBox ID="txtSerialNo" runat="server">M000000</asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -23,7 +23,7 @@
         <tr>
             <td style="width: 99px">&nbsp;</td>
             <td>
-                <asp:Button ID="Update" runat="server" Text="UPDATE" />
+                <asp:Button ID="btnUpdate" runat="server" Text="UPDATE" />
             </td>
         </tr>
         <tr>
