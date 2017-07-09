@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,12 +53,10 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -83,6 +83,7 @@
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -150,11 +151,10 @@
     <Content Include="LoginPages\Customer\Profile.aspx" />
     <Content Include="LoginPages\Customer\UpdateCustomer.aspx" />
     <Content Include="LoginPages\Customer\ViewResponse.aspx" />
-    <Content Include="LoginPages\Marketing\ErrorPage.aspx" />
-    <Content Include="LoginPages\Marketing\Feedback.aspx" />
+    <Content Include="LoginPages\Marketing\CustomerFeedback.aspx" />
+    <Content Include="LoginPages\Marketing\CustomerTransactions.aspx" />
+    <Content Include="LoginPages\Marketing\FeedbackResponse.aspx" />
     <Content Include="LoginPages\Marketing\IssueVoucher.aspx" />
-    <Content Include="LoginPages\Marketing\Response.aspx" />
-    <Content Include="LoginPages\Marketing\Transactions.aspx" />
     <Content Include="LoginPages\ProductManager\CreateProduct.aspx" />
     <Content Include="LoginPages\ProductManager\Image\Capture.PNG" />
     <Content Include="LoginPages\ProductManager\ProductManager.master" />
@@ -214,7 +214,9 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
@@ -228,6 +230,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Database.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -296,7 +299,6 @@
     <Compile Include="LoginPages\Customer\ViewResponse.aspx.designer.cs">
       <DependentUpon>ViewResponse.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginPages\Database.cs" />
     <Compile Include="LoginPages\Login.master.cs">
       <DependentUpon>Login.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,19 +306,19 @@
     <Compile Include="LoginPages\Login.master.designer.cs">
       <DependentUpon>Login.master</DependentUpon>
     </Compile>
-    <Compile Include="LoginPages\Marketing\ErrorPage.aspx.cs">
-      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    <Compile Include="LoginPages\Marketing\CustomerFeedback.aspx.cs">
+      <DependentUpon>CustomerFeedback.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginPages\Marketing\ErrorPage.aspx.designer.cs">
-      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    <Compile Include="LoginPages\Marketing\CustomerFeedback.aspx.designer.cs">
+      <DependentUpon>CustomerFeedback.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginPages\Marketing\Feedback.aspx.cs">
-      <DependentUpon>Feedback.aspx</DependentUpon>
+    <Compile Include="LoginPages\Marketing\CustomerTransactions.aspx.cs">
+      <DependentUpon>CustomerTransactions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginPages\Marketing\Feedback.aspx.designer.cs">
-      <DependentUpon>Feedback.aspx</DependentUpon>
+    <Compile Include="LoginPages\Marketing\CustomerTransactions.aspx.designer.cs">
+      <DependentUpon>CustomerTransactions.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPages\Marketing\IssueVoucher.aspx.cs">
       <DependentUpon>IssueVoucher.aspx</DependentUpon>
@@ -332,19 +334,12 @@
     <Compile Include="LoginPages\Marketing\Marketing.master.designer.cs">
       <DependentUpon>Marketing.master</DependentUpon>
     </Compile>
-    <Compile Include="LoginPages\Marketing\Response.aspx.cs">
-      <DependentUpon>Response.aspx</DependentUpon>
+    <Compile Include="LoginPages\Marketing\FeedbackResponse.aspx.cs">
+      <DependentUpon>FeedbackResponse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginPages\Marketing\Response.aspx.designer.cs">
-      <DependentUpon>Response.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="LoginPages\Marketing\Transactions.aspx.cs">
-      <DependentUpon>Transactions.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginPages\Marketing\Transactions.aspx.designer.cs">
-      <DependentUpon>Transactions.aspx</DependentUpon>
+    <Compile Include="LoginPages\Marketing\FeedbackResponse.aspx.designer.cs">
+      <DependentUpon>FeedbackResponse.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPages\ProductManager\CreateProduct.aspx.cs">
       <DependentUpon>CreateProduct.aspx</DependentUpon>
