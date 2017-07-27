@@ -8,22 +8,24 @@
         </tr>
         <tr>
             <td style="width: 99px; height: 22px;"></td>
-            <td style="height: 22px"></td>
+            <td style="height: 22px">&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 99px">Serial Number:</td>
-            <td>
-                <asp:TextBox ID="txtSerialNo" runat="server">M000000</asp:TextBox>
+            <td style="width: 99px; height: 24px;">Serial Number:</td>
+            <td style="height: 24px">
+                <asp:TextBox ID="txtSerialNo" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td style="width: 99px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:CustomValidator ID="cvError" runat="server" ControlToValidate="txtSerialNo" ErrorMessage="Serial Number Invalid!" OnServerValidate="cvError_ServerValidate"></asp:CustomValidator>
+            </td>
         </tr>
         <tr>
             <td style="width: 99px">&nbsp;</td>
             <td>
-                <asp:Button ID="btnUpdate" runat="server" Text="UPDATE" />
+                <asp:Button ID="btnUpdate" runat="server" Text="UPDATE" OnClick="btnUpdate_Click" />
             </td>
         </tr>
         <tr>

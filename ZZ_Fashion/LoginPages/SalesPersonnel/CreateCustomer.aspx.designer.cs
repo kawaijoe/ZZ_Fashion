@@ -31,6 +31,15 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         protected global::System.Web.UI.WebControls.TextBox Name;
         
         /// <summary>
+        /// reqName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqName;
+        
+        /// <summary>
         /// M control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         protected global::System.Web.UI.WebControls.TextBox DOB;
         
         /// <summary>
+        /// reqDOB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqDOB;
+        
+        /// <summary>
         /// Email control.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,15 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Email;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// Phone control.
@@ -76,6 +103,15 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         protected global::System.Web.UI.WebControls.TextBox Phone;
         
         /// <summary>
+        /// reqPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqPhone;
+        
+        /// <summary>
         /// Address control.
         /// </summary>
         /// <remarks>
@@ -83,6 +119,15 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Address;
+        
+        /// <summary>
+        /// reqAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqAddress;
         
         /// <summary>
         /// ddlCountry control.

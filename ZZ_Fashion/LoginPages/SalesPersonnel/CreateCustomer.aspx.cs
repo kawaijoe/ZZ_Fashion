@@ -68,5 +68,10 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
             }
 
         }
+
+        protected void M_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

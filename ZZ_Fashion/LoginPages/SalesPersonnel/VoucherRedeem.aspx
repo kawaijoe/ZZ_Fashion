@@ -13,18 +13,20 @@
         <tr>
             <td style="width: 116px">Serial Number:</td>
             <td>
-                <asp:TextBox ID="SerialNo" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtSerialNo" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 116px">&nbsp;</td>
+            <td id="cvError">
+                <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Invalid Serial Number!" OnServerValidate="CustomValidator1_ServerValidate"></asp:CustomValidator>
             </td>
         </tr>
         <tr>
             <td style="width: 116px">&nbsp;</td>
             <td>
-                <asp:Button ID="Redeem" runat="server" Text="REDEEM" />
+                <asp:Button ID="btnRedeem" runat="server" Text="REDEEM" OnClick="Redeem_Click" />
             </td>
-        </tr>
-        <tr>
-            <td style="width: 116px">&nbsp;</td>
-            <td>&nbsp;</td>
         </tr>
         <tr>
             <td style="width: 116px">&nbsp;</td>

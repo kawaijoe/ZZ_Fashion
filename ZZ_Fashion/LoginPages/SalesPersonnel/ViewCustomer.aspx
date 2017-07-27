@@ -10,13 +10,13 @@
         <tr>
             <td style="width: 131px">Search (ID / Name):</td>
             <td>
-                <asp:TextBox ID="Search" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtSearch" runat="server" OnTextChanged="txtSearch_TextChanged"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td style="width: 131px">&nbsp;</td>
             <td>
-                <asp:Button ID="searching" runat="server" Text="Search" />
+                <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" />
             </td>
         </tr>
         <tr>

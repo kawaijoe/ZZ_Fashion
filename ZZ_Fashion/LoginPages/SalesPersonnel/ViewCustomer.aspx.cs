@@ -13,11 +13,7 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
     public partial class ViewCustomers : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!Page.IsPostBack)
-            {
-                displayCustomers();
-            }
+        {            
 
         }
         protected void displayCustomers ()
@@ -26,7 +22,12 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
 
             SqlConnection conn = new SqlConnection(strconn);
 
-            SqlCommand cmd = new SqlCommand("SELECT MemberID, MName, MGender, MBirthDate, MAddress, MCountry, MTelNo, MEmailAddr FROM Customer", conn);
+            SqlCommand cmd = new SqlCommand("SELECT MemberID, MName, MGender, MBirthDate, MAddress, MCountry, MTelNo, MEmailAddr FROM Customer WHERE MemberID = @MemberID OR  MName = @MName", conn);
+
+
+            cmd.Parameters.AddWithValue("@MemberID", txtSearch.Text);
+            cmd.Parameters.AddWithValue("@MName", txtSearch.Text);
+            
 
             SqlDataAdapter dispCus = new SqlDataAdapter(cmd);
 
@@ -50,6 +51,17 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
             {
                 lblView.Text = "No Customer Record";
             }
+            
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            displayCustomers();
+            
+        }
+
+        protected void txtSearch_TextChanged(object sender, EventArgs e)
+        {
             
         }
     }

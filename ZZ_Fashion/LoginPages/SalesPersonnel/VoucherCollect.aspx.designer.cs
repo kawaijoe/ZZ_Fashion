@@ -22,6 +22,15 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         protected global::System.Web.UI.WebControls.TextBox txtSerialNo;
         
         /// <summary>
+        /// cvError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvError;
+        
+        /// <summary>
         /// btnUpdate control.
         /// </summary>
         /// <remarks>

@@ -18,15 +18,16 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
         public string Address { get; set; }
         public string Gender { get; set; }
         public string Country { get; set; }
+        
 
         public int AddCustomer()
         {
-            string strConn = ConfigurationManager.ConnectionStrings["ZZFashionCRM"].ToString();
+            string strConn = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
 
             SqlCommand command = new SqlCommand("INSERT INTO Customer (MemberID, MName, MGender, MBirthDate, MAddress, MCountry, MTelNo, MEmailAddr)"
-                + "VAVLUES(@ID, @Name, @Gender, @DOB, @Address, @Country, @Phone, @Email", conn);
+                + "VALUES(@ID, @Name, @Gender, @DOB, @Address, @Country, @Phone, @Email)", conn);
 
             command.Parameters.AddWithValue("@ID", ID);
             command.Parameters.AddWithValue("@Name", Name);
@@ -44,8 +45,9 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
             conn.Close();
 
             return 0;
-
         }
+
+        
     }
 
 
