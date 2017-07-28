@@ -243,6 +243,7 @@
     </Compile>
     <Compile Include="LoginPages\Customer\AppCode\CustomerStuff.cs" />
     <Compile Include="LoginPages\Customer\AppCode\FeedBack.cs" />
+    <Compile Include="LoginPages\Customer\AppCode\Response.cs" />
     <Compile Include="LoginPages\Customer\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
