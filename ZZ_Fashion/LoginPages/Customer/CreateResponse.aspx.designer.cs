@@ -10,34 +10,25 @@
 namespace ZZ_Fashion.LoginPages.Customer {
     
     
-    public partial class CreateFeedback {
+    public partial class CreateResponse {
         
         /// <summary>
-        /// TitleFeedBack control.
+        /// ResponseMemberID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TitleFeedBack;
+        protected global::System.Web.UI.WebControls.TextBox ResponseMemberID;
         
         /// <summary>
-        /// FeedBackMsg control.
+        /// ResponseText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FeedBackMsg;
-        
-        /// <summary>
-        /// UploadFeedbackPhoto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload UploadFeedbackPhoto;
+        protected global::System.Web.UI.WebControls.TextBox ResponseText;
         
         /// <summary>
         /// Submit control.

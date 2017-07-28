@@ -144,6 +144,7 @@
     <Content Include="Images\ZZFashion_Logo.png" />
     <Content Include="LoginPages\Customer\ChangePassword.aspx" />
     <Content Include="LoginPages\Customer\CreateFeedback.aspx" />
+    <Content Include="LoginPages\Customer\CreateResponse.aspx" />
     <Content Include="LoginPages\Customer\Customer.master" />
     <Content Include="LoginPages\Customer\CustomerHomePage.aspx" />
     <Content Include="LoginPages\Customer\Login.aspx" />
@@ -240,6 +241,7 @@
     </Compile>
     <Compile Include="LoginPages\Customer\AppCode\CustomerStuff.cs" />
     <Compile Include="LoginPages\Customer\AppCode\FeedBack.cs" />
+    <Compile Include="LoginPages\Customer\AppCode\Response.cs" />
     <Compile Include="LoginPages\Customer\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -253,6 +255,13 @@
     </Compile>
     <Compile Include="LoginPages\Customer\CreateFeedback.aspx.designer.cs">
       <DependentUpon>CreateFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\Customer\CreateResponse.aspx.cs">
+      <DependentUpon>CreateResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Customer\CreateResponse.aspx.designer.cs">
+      <DependentUpon>CreateResponse.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPages\Customer\Customer.master.cs">
       <DependentUpon>Customer.master</DependentUpon>
@@ -490,6 +499,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\Feedback\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
