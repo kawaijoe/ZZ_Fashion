@@ -32,44 +32,30 @@ namespace ZZ_Fashion.LoginPages.Customer
 
             if (errorCode == 0)
             {
-                int PhotoFeedbackID = -1;
+                string PhotoFeedbackID = "";
                 if (UploadFeedbackPhoto.HasFile == true)
                 {
                     // find the filename extension of the file to be uploaded
                     string fileExtension = Path.GetExtension(UploadFeedbackPhoto.FileName);
 
                     // find FeedbackID of this image so that it can be used as Image name
-                    PhotoFeedbackID = objFeedBack.FindFeedbackID();
+                    PhotoFeedbackID = objFeedBack.FindFeedbackID().ToString();
 
                     // Image name to be saved in 'Images' folder
-                    string FileSavePath = MapPath("~/Images/Feedback/" + "images-" + PhotoFeedbackID.ToString() + fileExtension);
+                    string FileSavePath = MapPath("~/Images/Feedback/" + "images-" + PhotoFeedbackID + fileExtension);
 
                     // Save image in application 'Images' folder
                     UploadFeedbackPhoto.SaveAs(FileSavePath);
 
-
                     // to View image in Webpage using Image Control
-                    //FeedbackImage.ImageUrl = "~/Images/Feedback/" + UploadFeedbackPhoto;
+                    FeedbackImage.ImageUrl = "~/Images/Feedback/" + UploadFeedbackPhoto;
 
-
-                    objFeedBack.ImageFileName = "images-" + PhotoFeedbackID.ToString() + fileExtension;
-                    objFeedBack.FeedbackID = PhotoFeedbackID;
+                    objFeedBack.ImageFileName = FileSavePath;
 
                     // use an UPDATE SQL line to update the existing feedback record to add the image name 
-                    int errorCode2 = objFeedBack.updatePicture();
-                    if (errorCode2 == 0)
-                    {
-                        Response.Redirect("ViewResponse.aspx");
-                    }
-                    else
-                    {
-                        Message.Text = "Update was unsuccessful, Picture was not updated into Database";
-                    }
                 }
-                else
-                {
-                    Response.Redirect("ViewResponse.aspx");
-                }
+
+                Response.Redirect("ViewResponse.aspx");
             }
             else
             {

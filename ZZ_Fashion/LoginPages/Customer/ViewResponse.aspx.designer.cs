@@ -22,40 +22,13 @@ namespace ZZ_Fashion.LoginPages.Customer {
         protected global::System.Web.UI.WebControls.GridView gvFeedback;
         
         /// <summary>
-        /// lblStaffMessage control.
+        /// gvResponse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStaffMessage;
-        
-        /// <summary>
-        /// gvStaffResponse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvStaffResponse;
-        
-        /// <summary>
-        /// lblCustomerMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCustomerMessage;
-        
-        /// <summary>
-        /// gvCustomerResponse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCustomerResponse;
+        protected global::System.Web.UI.WebControls.GridView gvResponse;
         
         /// <summary>
         /// CreateFeedback control.
@@ -65,14 +38,5 @@ namespace ZZ_Fashion.LoginPages.Customer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CreateFeedback;
-        
-        /// <summary>
-        /// CreateResponse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CreateResponse;
     }
 }

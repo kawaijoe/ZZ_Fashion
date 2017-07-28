@@ -21,6 +21,8 @@
             <td style="width: 192px; height: 74px;"></td>
             <td style="height: 74px">
                 <asp:FileUpload ID="UploadFeedbackPhoto" runat="server" />
+                <br />
+                <asp:Image ID="FeedbackImage" runat="server" />
             </td>
         </tr>
         <tr>
