@@ -18,31 +18,72 @@ namespace ZZ_Fashion.LoginPages.Customer
             if (!Page.IsPostBack)
             {
                 displayFeedbackList();
+
+                CreateResponse.Visible = false;
             }
         }
 
-        protected void AddFeedBack_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("CreateFeedback.aspx");
-        }
 
         protected void gvFeedback_SelectedIndexChanged(object sender, EventArgs e)
         {
+            CreateResponse.Visible = true;
+
             int selectedfeedbackID = Convert.ToInt32(gvFeedback.SelectedDataKey[0]);
 
             FeedBack objfeedback = new FeedBack();
 
-            DataSet result = new DataSet();
+            DataSet resultStaff = new DataSet();
 
+            DataSet resultCustomer = new DataSet();
 
+            //Response objResponse = new Response();
 
             objfeedback.FeedbackID = selectedfeedbackID;
 
-            gvResponse.DataSource = result.Tables["FeedBack"];
+            // objResponse.FeedbackID = selectedfeedbackID;
 
-            gvResponse.DataBind();
+            // For Staff response GridView
+            int errorCodeStaff = objfeedback.findStaffResponse(ref resultStaff);
+            // For Customer Response GridView
+            int errorCodeCustomer = objfeedback.findCustomerResponse(ref resultCustomer);
 
-            
+
+            if (errorCodeStaff == 0)
+            {
+                gvStaffResponse.DataSource = resultStaff.Tables["StaffResponse"];
+
+                gvStaffResponse.DataBind();
+
+                lblStaffMessage.Text = "";
+
+                gvStaffResponse.Visible = true;
+            }
+            if (errorCodeCustomer == 0)
+            {
+                gvCustomerResponse.DataSource = resultCustomer.Tables["CustomerResponse"];
+
+                gvCustomerResponse.DataBind();
+
+                lblCustomerMessage.Text = "";
+
+                gvCustomerResponse.Visible = true;
+            }
+            else if (errorCodeStaff == -2)
+            {
+                lblStaffMessage.Text = "There are no Responses yet";
+                gvStaffResponse.Visible = false;
+                lblCustomerMessage.Text = "";
+                gvCustomerResponse.Visible = false;
+            }
+            else if (errorCodeCustomer == -2)
+            {
+                lblStaffMessage.Text = "There are no Responses from the Customer yet";
+                gvCustomerResponse.Visible = false;
+            }
+
+
+
+
         }
 
         public void displayFeedbackList()
@@ -52,7 +93,7 @@ namespace ZZ_Fashion.LoginPages.Customer
 
             SqlConnection connection = new SqlConnection(stringConnection);
 
-            SqlCommand command = new SqlCommand("select ResponseID, Response.FeedbackID, Response.MemberID, StaffID, Response.DateTimePosted, Response.Text, Title, Feedback.Text as 'Feedback Text' from Response INNER JOIN Feedback on Response.FeedbackID = Feedback.FeedbackID WHERE Response.MemberID = @MemberID ;", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM Feedback Where MemberID = @MemberID ", connection);
 
             command.Parameters.AddWithValue("@MemberID", Session["loginID"]);
 
@@ -70,7 +111,23 @@ namespace ZZ_Fashion.LoginPages.Customer
 
             gvFeedback.DataBind();
 
-     
+
+        }
+
+        protected void CreateFeedback_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateFeedback.aspx");
+        }
+
+        protected void CreateResponse_Click(object sender, EventArgs e)
+        {
+            string strValues;
+            int selectedfeedbackID = Convert.ToInt32(gvFeedback.SelectedDataKey[0]);
+            // retrieve the inputs
+            strValues = "feedbackID=" + selectedfeedbackID;
+            // display the values
+            Server.UrlEncode(strValues);
+            Response.Redirect("CreateResponse.aspx?" + strValues);
         }
     }
 }
