@@ -13,30 +13,48 @@ namespace ZZ_Fashion.LoginPages.Marketing {
     public partial class IssueVoucher {
         
         /// <summary>
-        /// title control.
+        /// Title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label title;
+        protected global::System.Web.UI.WebControls.Label Title;
         
         /// <summary>
-        /// amount control.
+        /// Description control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label amount;
+        protected global::System.Web.UI.WebControls.Label Description;
         
         /// <summary>
-        /// issue control.
+        /// Confirm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button issue;
+        protected global::System.Web.UI.WebControls.Button Confirm;
+        
+        /// <summary>
+        /// Cancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Cancel;
+        
+        /// <summary>
+        /// Message control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Message;
     }
 }

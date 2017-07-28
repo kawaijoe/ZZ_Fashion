@@ -10,24 +10,33 @@
 namespace ZZ_Fashion.LoginPages.Marketing {
     
     
-    public partial class Feedback {
+    public partial class CustomerTransactions {
         
         /// <summary>
-        /// title control.
+        /// Title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label title;
+        protected global::System.Web.UI.WebControls.Label Title;
         
         /// <summary>
-        /// customerFeedback control.
+        /// Transactions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView customerFeedback;
+        protected global::System.Web.UI.WebControls.GridView Transactions;
+        
+        /// <summary>
+        /// Message control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Message;
     }
 }

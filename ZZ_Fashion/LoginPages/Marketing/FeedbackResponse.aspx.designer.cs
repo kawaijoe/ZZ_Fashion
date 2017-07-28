@@ -10,69 +10,87 @@
 namespace ZZ_Fashion.LoginPages.Marketing {
     
     
-    public partial class Response {
+    public partial class FeedbackResponse {
         
         /// <summary>
-        /// title control.
+        /// Title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label title;
+        protected global::System.Web.UI.WebControls.Label Title;
         
         /// <summary>
-        /// meta control.
+        /// FeedbackTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label meta;
+        protected global::System.Web.UI.WebControls.Label FeedbackTitle;
         
         /// <summary>
-        /// feedback control.
+        /// Information control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label feedback;
+        protected global::System.Web.UI.WebControls.Label Information;
         
         /// <summary>
-        /// oldResponse control.
+        /// Feedback control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label oldResponse;
+        protected global::System.Web.UI.WebControls.Label Feedback;
         
         /// <summary>
-        /// newResponse control.
+        /// Attached control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox newResponse;
+        protected global::System.Web.UI.WebControls.Image Attached;
         
         /// <summary>
-        /// responseRequiredValidator control.
+        /// NewResponse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator responseRequiredValidator;
+        protected global::System.Web.UI.WebControls.TextBox NewResponse;
         
         /// <summary>
-        /// submit control.
+        /// Confirm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.WebControls.Button Confirm;
+        
+        /// <summary>
+        /// Cancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Cancel;
+        
+        /// <summary>
+        /// Message control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Message;
     }
 }

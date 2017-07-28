@@ -13,21 +13,30 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
     public partial class VoucherRedeem {
         
         /// <summary>
-        /// SerialNo control.
+        /// txtSerialNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SerialNo;
+        protected global::System.Web.UI.WebControls.TextBox txtSerialNo;
         
         /// <summary>
-        /// Redeem control.
+        /// CustomValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Redeem;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
+        
+        /// <summary>
+        /// btnRedeem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRedeem;
     }
 }

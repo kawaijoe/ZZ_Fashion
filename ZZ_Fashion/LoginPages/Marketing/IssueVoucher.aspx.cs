@@ -10,50 +10,25 @@ namespace ZZ_Fashion.LoginPages.Marketing {
 
         protected void Page_Load(object sender, EventArgs e) {
             if (!IsPostBack) {
-                ViewState["memberID"] = Session["transaction-memberID"];
-                ViewState["amount"] = Session["transaction-amount"];
-                ViewState["dateCreated"] = Session["transaction-dateCreated"];
-
-                amount.Text = "Cash voucher amount to issue: " + Session["transaction-amount"];
+                LoadDescription();
             }
         }
 
-        protected void OnClick(object sender, EventArgs args) {
-            issue.Enabled = false;
-            issue.UseSubmitBehavior = false;
+        private void LoadDescription() {
+            var id = Request.QueryString["id"];
+            double spending;
 
-            decimal amount = DetermineVouchers(Convert.ToDouble(ViewState["amount"]));
-            var created = (DateTime)ViewState["dateCreated"];
-            var serial = (int) Application["serial"] + 1;
-            Application["serial"] = serial;
+            if (id != null && double.TryParse(Request.QueryString["spending"], out spending)) {
+                var amount = DetermineAmount(spending);
+                Description.Text = "Voucher amount to issue for customer " + id + " : " + amount.ToString("0.00");
+                ViewState["amount"] = amount;
 
-            Database.INSTANCE.Insert(
-                "INSERT INTO CashVoucher (" +
-                "   MemberID, Amount, MonthIssuedFor, YearIssuedFor, DateTimeIssued, VoucherSN, Status, DateTimedRedeemed" +
-                ") VALUES (" +
-                "   %id, %voucherAmount, %month, %year, %issued, %serial, %status, %redeemed" +
-                ")", 
-                command => {
-                    command.Parameters.AddWithValue("%id", Convert.ToInt32(ViewState["memberID"]));
-                    command.Parameters.AddWithValue("%voucherAmount", amount);
-                    command.Parameters.AddWithValue("%month", created.Month);
-                    command.Parameters.AddWithValue("%year", created.Year);
-                    command.Parameters.AddWithValue("%issued", DateTime.Now);
-                    command.Parameters.AddWithValue("%serial", DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + serial);
-                    command.Parameters.AddWithValue("%status", 0);
-                    command.Parameters.AddWithValue("%redeemed", null);
-
-                    if (command.ExecuteNonQuery() == 1) {
-                        title.Text = "Your response has been saved"; ;
-
-                    } else {
-                        title.Text = "Failed to save response, please try again";
-                    }
-
-                }, exception => title.Text = "Failed to save response, please try again");
+            } else {
+                DisableConfirmButton("Invalid URL, click the cancel button to return to the previous page");
+            }
         }
 
-        protected decimal DetermineVouchers(double spending) {
+        protected double DetermineAmount(double spending) {
             if (spending < 200) {
                 return 0;
 
@@ -69,6 +44,47 @@ namespace ZZ_Fashion.LoginPages.Marketing {
             } else {
                 return 160;
             }
+        }
+
+
+        protected void OnConfirm(object sender, EventArgs e) {
+            DisableConfirmButton();
+            Database.INSTANCE.Execute(
+                "INSERT INTO CashVoucher (" +
+                "   MemberID, Amount, MonthIssuedFor, YearIssuedFor, DateTimeIssued, VoucherSN, Status" +
+                ") VALUES (" +
+                "   %id, %voucherAmount, %month, %year, %issued, %serial, %statu" +
+                ")",
+                command => {
+                    var parameters = command.Parameters;
+                    command.Parameters.AddWithValue("%id", Convert.ToInt32(ViewState["memberID"]));
+                    command.Parameters.AddWithValue("%voucherAmount", ViewState["amount"]);
+                    //command.Parameters.AddWithValue("%month", created.Month);
+                    //command.Parameters.AddWithValue("%year", created.Year);
+                    //command.Parameters.AddWithValue("%issued", DateTime.Now);
+                    //command.Parameters.AddWithValue("%serial", DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + serial);
+                    command.Parameters.AddWithValue("%status", 0);
+
+                    int inserted = command.ExecuteNonQuery();
+                    if (inserted == 1) {
+                        Response.Redirect("./CustomerTransactions.aspx?message=Succesfully issued voucher to customer: " + Request.QueryString["id"]);
+
+                    } else {
+                        Message.Text = "Failed to issue voucher, click the cancel button to return to the previous page";
+                    }
+
+                }, ex => Message.Text = "Failed to issue voucher, click the cancel button to return to the previous page");
+        }
+
+        protected void OnCancel(object sender, EventArgs e) {
+            Response.Redirect("./CustomerTransactions.aspx?message=Cancelled issue of vouchers to customer: " + Request.QueryString["id"]);
+        }
+
+
+        protected void DisableConfirmButton(string message = "") {
+            Message.Text = message;
+            Confirm.Enabled = false;
+            Confirm.UseSubmitBehavior = false;
         }
 
     }
