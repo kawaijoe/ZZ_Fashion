@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:GridView ID="gvFeedback" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CssClass="col-xs-12 col-xs-push-4" DataKeyNames="FeedbackID" OnSelectedIndexChanged="gvFeedback_SelectedIndexChanged">
         <Columns>
+            <asp:BoundField DataField="DateTimePosted" HeaderText="DateTimePosted" />
             <asp:BoundField DataField="Title" HeaderText="Title:" ReadOnly="True" />
             <asp:BoundField DataField="Text" HeaderText="Messages:" ReadOnly="True" />
         </Columns>
