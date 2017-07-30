@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPages/Marketing/Marketing.master" AutoEventWireup="true" CodeBehind="IssueVoucher.aspx.cs" Inherits="ZZ_Fashion.LoginPages.Marketing.IssueVoucher" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
-    <asp:Label ID="Title" runat="server" Text="Issue voucher"></asp:Label>
+    Issue voucher
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">

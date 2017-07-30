@@ -91,8 +91,5 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
             Response.Redirect("/ProductManager/ViewProduct");
         }
 
-        protected void Price_TextChanged(object sender, EventArgs e) {
-
-        }
     }
 }

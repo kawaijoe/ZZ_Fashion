@@ -17,18 +17,10 @@ namespace ZZ_Fashion.LoginPages.Marketing {
         
 
         protected void LoadInformation() {
-            var title = Request.QueryString["title"];
             var id = Request.QueryString["id"];
             var customer = Request.QueryString["customer"];
-            var text = Request.QueryString["text"];
-            var attachement = Request.QueryString["attachement"];
-            DateTime posted;
-
-            if (title != null && id != null && customer != null && DateTime.TryParse(Request.QueryString["posted"], out posted) && text != null) {
-                FeedbackTitle.Text = title;
-                Information.Text = "Feedback: " + id + " created by customer: " + customer + " on " + posted.ToShortDateString();
-                Feedback.Text = text;
-                Attached.ImageUrl = Request.QueryString["attachment"];
+            if (id != null && customer != null) {
+                Information.Text = "Feedback: " + id + " created by customer: " + customer;
 
             } else {
                 DisableConfirmButton("Invalid URL, click the cancel button to return to the previous page");
@@ -37,16 +29,21 @@ namespace ZZ_Fashion.LoginPages.Marketing {
 
 
         protected void OnConfirm(object sender, EventArgs e) {
+            if (NewResponse.Text == "") {
+                Message.Text = "Response cannot be blank";
+                return;
+            }
+
             DisableConfirmButton();
             Database.INSTANCE.Execute(
-                "INSERT INTO Response (FeedbackID, MemberID, StaffID, DateTimePosted, Text) VALUES (%id, %member, %staff, %posted, %text)", 
+                "INSERT INTO Response (FeedbackID, MemberID, StaffID, DateTimePosted, Text) VALUES (@feedbackID, @member, @staff, @posted, @text)", 
                 command => {
                     var parameters = command.Parameters;
-                    parameters.AddWithValue("%id", Request.QueryString["id"]);
-                    parameters.AddWithValue("%member", Request.QueryString["customer"]);
-                    parameters.AddWithValue("%staff", Session["ID"]);
-                    parameters.AddWithValue("%posted", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-                    parameters.AddWithValue("%text", NewResponse.Text);
+                    parameters.AddWithValue("@feedbackID", Request.QueryString["id"]);
+                    parameters.AddWithValue("@member", Request.QueryString["customer"]);
+                    parameters.AddWithValue("@staff", Session["id"] != null ? Session["id"] : DBNull.Value);
+                    parameters.AddWithValue("@posted", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+                    parameters.AddWithValue("@text", NewResponse.Text);
 
                     int inserted = command.ExecuteNonQuery();
                     if (inserted == 1) {
@@ -56,7 +53,7 @@ namespace ZZ_Fashion.LoginPages.Marketing {
                         Message.Text = "Failed to create response, click the cancel button to return to the previous page";
                     }
 
-                }, ex => Message.Text = "Failed to create response, click the cancel button to return to the previous page");
+                }, ex => Message.Text = ex.Message + "Failed to create response, click the cancel button to return to the previous page");
         }
 
         protected void OnCancel(object sender, EventArgs e) {
