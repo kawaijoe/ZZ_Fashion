@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -36,12 +37,22 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
             SqlConnection conn = new SqlConnection(strConn);
 
             string query;
-            if (hasPicture)
+            if (hasPicture) {
+                string fileExtension = Path.GetExtension(UploadPhoto.FileName);
+
+                PhotoFeedbackID = objFeedBack.FindFeedbackID();
+
+                string FileSavePath = MapPath("~/Images/Product/" + PhotoFeedbackID.ToString() + fileExtension);
+
+                // Save image in application 'Images' folder
+                UploadPhoto.SaveAs(FileSavePath);
+
                 query = "INSERT INTO Product (ProductTitle, ProductImage, Price, EffectiveDate) " +
                     "VALUES (@productTitle, @productImage, @price, @effectiveDate)";
-            else
+            } else {
                 query = "INSERT INTO Product (ProductTitle, Price, EffectiveDate) " +
                     "VALUES (@productTitle, @price, @effectiveDate)";
+            }
 
             //Instantiate a SqlCommand object, supply it with SQL statement INSERT
             //and the connection object for connecting to the database.
@@ -67,6 +78,10 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
             conn.Close();
 
             status.Text = "Product have been added!";
+        }
+
+        protected void Price_TextChanged(object sender, EventArgs e) {
+
         }
     }
 }

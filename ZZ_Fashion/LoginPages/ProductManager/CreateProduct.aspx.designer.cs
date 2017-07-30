@@ -40,13 +40,13 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
         protected global::System.Web.UI.WebControls.Image ImagePreview;
         
         /// <summary>
-        /// UploadFile control.
+        /// UploadPhoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UploadFile;
+        protected global::System.Web.UI.WebControls.FileUpload UploadPhoto;
         
         /// <summary>
         /// Price control.
@@ -74,6 +74,15 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        
+        /// <summary>
+        /// CompareValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator2;
         
         /// <summary>
         /// EffectiveDate control.

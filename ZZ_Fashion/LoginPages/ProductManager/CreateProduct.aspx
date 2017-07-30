@@ -21,15 +21,16 @@
     <div class="row top-padding">
         <div class="col-md-4" align="right">Image:</div>
         <div class="col-md-8">
-            <asp:Button ID="UploadFile" runat="server" Text="Upload File" CausesValidation="False" />
+            <asp:FileUpload ID="UploadPhoto" runat="server" CausesValidation="False" />
         </div>
     </div>
     <div class="row top-padding">
         <div class="col-md-4" align="right">Price:</div>
         <div class="col-md-8">
-            <asp:TextBox ID="Price" runat="server"></asp:TextBox>
+            <asp:TextBox ID="Price" runat="server" OnTextChanged="Price_TextChanged"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter a price!" Display="Dynamic" ControlToValidate="Price"></asp:RequiredFieldValidator>
-            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Price has to be a number more than 0!" ControlToValidate="Price" Operator="GreaterThan" ValueToCompare="0" Type="Currency"></asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Price has to be a number more than 20!" ControlToValidate="Price" Operator="GreaterThanEqual" ValueToCompare="20" Type="Currency"></asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Price has to be a number less than 500!" ControlToValidate="Price" Operator="LessThanEqual" ValueToCompare="500" Type="Currency"></asp:CompareValidator>
         </div>
     </div>
     <div class="row top-padding">
