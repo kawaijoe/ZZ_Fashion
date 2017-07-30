@@ -53,20 +53,21 @@ namespace ZZ_Fashion.LoginPages.Marketing {
                 "INSERT INTO CashVoucher (" +
                 "   MemberID, Amount, MonthIssuedFor, YearIssuedFor, DateTimeIssued, VoucherSN, Status" +
                 ") VALUES (" +
-                "   %id, %voucherAmount, %month, %year, %issued, %serial, %statu" +
+                "   %id, %voucherAmount, %month, %year, %issued, %serial, %status" +
                 ")",
                 command => {
                     var parameters = command.Parameters;
                     command.Parameters.AddWithValue("%id", Convert.ToInt32(ViewState["memberID"]));
                     command.Parameters.AddWithValue("%voucherAmount", ViewState["amount"]);
-                    //command.Parameters.AddWithValue("%month", created.Month);
-                    //command.Parameters.AddWithValue("%year", created.Year);
-                    //command.Parameters.AddWithValue("%issued", DateTime.Now);
-                    //command.Parameters.AddWithValue("%serial", DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + serial);
+                    command.Parameters.AddWithValue("%month", DateTime.Now.AddMonths(-1).Month);
+                    command.Parameters.AddWithValue("%year", DateTime.Now.AddYears(-1).Year);
+                    command.Parameters.AddWithValue("%issued", DateTime.Now);
+                    command.Parameters.AddWithValue("%serial", DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + Database.INSTANCE.Cache);
                     command.Parameters.AddWithValue("%status", 0);
 
                     int inserted = command.ExecuteNonQuery();
                     if (inserted == 1) {
+                        Database.INSTANCE.Cache = Database.INSTANCE.Cache + 1;
                         Response.Redirect("./CustomerTransactions.aspx?message=Succesfully issued voucher to customer: " + Request.QueryString["id"]);
 
                     } else {

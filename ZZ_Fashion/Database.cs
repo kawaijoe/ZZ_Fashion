@@ -15,12 +15,30 @@ namespace ZZ_Fashion {
         public static readonly Database INSTANCE = new Database(ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString());
 
 
+        public int Cache { get; set; }
         private string url;
 
 
         private Database(string url) {
             this.url = url;
+            PopulateCache();
         }
+
+        private void PopulateCache() {
+            Try(connection => {
+                using (var table = new DataTable()) {
+                    table.Load(new SqlCommand("SELECT MAX(IssuingID) FROM CashVoucher", connection).ExecuteReader());
+                    if (table.Rows.Count == 1) {
+                        Cache = Convert.ToInt32(table.Rows[0]);
+
+                    } else {
+                        Cache = 0;
+                    }
+                }
+
+            }, ex => Cache = 0);
+        }
+
 
 
         public void Bind(GridView view, string query, Action<SqlException> handle) {
