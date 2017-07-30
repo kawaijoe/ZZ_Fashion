@@ -29,6 +29,11 @@ namespace ZZ_Fashion.LoginPages.Marketing {
 
 
         protected void OnConfirm(object sender, EventArgs e) {
+            if (NewResponse.Text == "") {
+                Message.Text = "Response cannot be blank";
+                return;
+            }
+
             DisableConfirmButton();
             Database.INSTANCE.Execute(
                 "INSERT INTO Response (FeedbackID, MemberID, StaffID, DateTimePosted, Text) VALUES (@feedbackID, @member, @staff, @posted, @text)", 
