@@ -142,6 +142,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Placeholder.jpg" />
+    <Content Include="Images\Product\0367420800_1_1_3.jpg" />
+    <Content Include="Images\Product\0722437052_1_1_3.jpg" />
+    <Content Include="Images\Product\1381043712_1_1_3.jpg" />
+    <Content Include="Images\Product\2070239550_1_1_3.jpg" />
+    <Content Include="Images\Product\2669795710_1_1_3.jpg" />
+    <Content Include="Images\Product\2705273400_1_1_3.jpg" />
+    <Content Include="Images\Product\5644031413_1_1_3.jpg" />
+    <Content Include="Images\Product\6917485615_1_1_3.jpg" />
+    <Content Include="Images\Product\9815401617_1_1_3.jpg" />
     <Content Include="Images\ZZFashion_Logo.png" />
     <Content Include="LoginPages\Customer\ChangePassword.aspx" />
     <Content Include="LoginPages\Customer\CreateFeedback.aspx" />
@@ -495,7 +504,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

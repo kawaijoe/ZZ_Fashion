@@ -13,12 +13,6 @@
         </div>
     </div>
     <div class="row top-padding">
-        <div class="col-md-4" align="right"></div>
-        <div class="col-md-8">
-            <asp:Image ID="ImagePreview" runat="server" ImageUrl="~/Images/Placeholder.jpg" Height="190px" Width="178px" />
-        </div>
-    </div>
-    <div class="row top-padding">
         <div class="col-md-4" align="right">Image:</div>
         <div class="col-md-8">
             <asp:FileUpload ID="UploadPhoto" runat="server" CausesValidation="False" />
