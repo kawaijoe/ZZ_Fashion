@@ -12,31 +12,33 @@ using System.Web.UI.WebControls;
 namespace ZZ_Fashion {
     public class Database {
 
-        public static readonly Database INSTANCE = new Database(ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString());
+        public static Database INSTANCE = new Database(ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString());
 
 
-        public int Cache { get; set; }
         private string url;
 
 
         private Database(string url) {
             this.url = url;
-            PopulateCache();
         }
 
-        private void PopulateCache() {
+
+        public int RetrieveSerialNumber() {
+            var cache = 0;
             Try(connection => {
                 using (var table = new DataTable()) {
                     table.Load(new SqlCommand("SELECT MAX(IssuingID) FROM CashVoucher", connection).ExecuteReader());
                     if (table.Rows.Count == 1) {
-                        Cache = Convert.ToInt32(table.Rows[0]);
+                        cache = Convert.ToInt32(table.Rows[0][0]);
 
                     } else {
-                        Cache = 0;
+                        cache = 0;
                     }
                 }
 
-            }, ex => Cache = 0);
+            }, ex => cache = 0);
+
+            return cache;
         }
 
 
@@ -59,7 +61,7 @@ namespace ZZ_Fashion {
 
         private void Try(Action<SqlConnection> execute, Action<SqlException> handle) {
             try {
-                using (var connection = new SqlConnection()) {
+                using (var connection = new SqlConnection(url)) {
                     connection.Open();
                     execute(connection);
                 }

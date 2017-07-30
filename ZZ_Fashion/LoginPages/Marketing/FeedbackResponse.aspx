@@ -1,30 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPages/Marketing/Marketing.master" AutoEventWireup="true" CodeBehind="FeedbackResponse.aspx.cs" Inherits="ZZ_Fashion.LoginPages.Marketing.FeedbackResponse" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
-    <asp:Label ID="Title" runat="server" Text="Respond to feedback"></asp:Label>
+    Respond to feedback
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <table style="width: 100%;">
-        <tr>
-            <td>
-                <asp:Label ID="FeedbackTitle" runat="server" Text=""></asp:Label>
-            </td>
-        </tr>
 
         <tr>
             <td>
                 <asp:Label ID="Information" runat="server" Text=""></asp:Label>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <asp:Label ID="Feedback" runat="server" Text=""></asp:Label>
-            </td>
-
-            <td>
-                <asp:Image ID="Attached" runat="server" />
             </td>
         </tr>
 
