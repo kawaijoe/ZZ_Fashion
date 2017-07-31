@@ -166,7 +166,6 @@
     <Content Include="LoginPages\Marketing\FeedbackResponse.aspx" />
     <Content Include="LoginPages\Marketing\IssueVoucher.aspx" />
     <Content Include="LoginPages\ProductManager\CreateProduct.aspx" />
-    <Content Include="LoginPages\ProductManager\Image\Capture.PNG" />
     <Content Include="LoginPages\ProductManager\ProductManager.master" />
     <Content Include="LoginPages\ProductManager\UpdateProduct.aspx" />
     <Content Include="LoginPages\ProductManager\UploadImage.aspx" />
@@ -175,7 +174,6 @@
     <Content Include="LoginPages\SalesPersonnel\SalesPersonnel.master" />
     <Content Include="LoginPages\Login.master" />
     <Content Include="Public\AboutUs.aspx" />
-    <Content Include="Public\Cart.aspx" />
     <Content Include="Public\Catalogue.aspx" />
     <Content Include="Public\Image\cart.PNG" />
     <Content Include="Public\Image\catalogue.PNG" />
@@ -192,8 +190,6 @@
     <Content Include="LoginPages\SalesPersonnel\ViewCustomer.aspx" />
     <Content Include="LoginPages\SalesPersonnel\VoucherCollect.aspx" />
     <Content Include="LoginPages\SalesPersonnel\VoucherRedeem.aspx" />
-    <Content Include="Public\RecoverPassword.aspx" />
-    <Content Include="Public\Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -438,13 +434,6 @@
     <Compile Include="Public\AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Public\Cart.aspx.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Public\Cart.aspx.designer.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Public\Catalogue.aspx.cs">
       <DependentUpon>Catalogue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -465,20 +454,6 @@
     </Compile>
     <Compile Include="Public\Public.master.designer.cs">
       <DependentUpon>Public.master</DependentUpon>
-    </Compile>
-    <Compile Include="Public\RecoverPassword.aspx.cs">
-      <DependentUpon>RecoverPassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Public\RecoverPassword.aspx.designer.cs">
-      <DependentUpon>RecoverPassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Public\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Public\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

@@ -40,18 +40,13 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
             if (UploadPhoto.HasFile) {
                 string fileExtension = Path.GetExtension(UploadPhoto.FileName);
 
-                string stringConnection = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
+                SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM Product", conn);
 
-                SqlConnection connection = new SqlConnection(stringConnection);
-
-                SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM Product", connection);
-
-
-                connection.Open();
+                conn.Open();
 
                 int Id = Convert.ToInt32(command.ExecuteScalar()) + 1;
 
-                connection.Close();
+                conn.Close();
 
                 fileName = Id.ToString() + fileExtension;
                 string FileSavePath = MapPath("~/Images/Product/" + fileName);
@@ -87,8 +82,7 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
             //A connection should be closed after operations.
             conn.Close();
 
-            status.Text = "Product have been added!";
-            Response.Redirect("/ProductManager/ViewProduct");
+            Response.Redirect("/LoginPages/ProductManager/ViewProduct");
         }
 
     }

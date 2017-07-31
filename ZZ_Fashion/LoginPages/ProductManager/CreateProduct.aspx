@@ -41,10 +41,4 @@
             <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
         </div>
     </div>
-    <div class="row top-padding">
-        <div class="col-md-4" align="right"></div>
-        <div class="col-md-8">
-            <asp:Label ID="status" runat="server" Text=""></asp:Label>
-        </div>
-    </div>
 </asp:Content>

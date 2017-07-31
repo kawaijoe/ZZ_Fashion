@@ -11,7 +11,10 @@ using System.Web.UI.WebControls;
 namespace ZZ_Fashion.Public {
     public partial class Catalogue : System.Web.UI.Page {
 
+        string NewProduct = "old";
+
         protected void Page_Init(object sender, EventArgs e) {
+            NewProduct = Request.QueryString["new"];
             displayCatalogue();
         }
 
@@ -29,7 +32,13 @@ namespace ZZ_Fashion.Public {
             //Instantiate a SqlCommand object, supply it with the SQL statement
             //SELECT  that operates against the database, and the connection object
             //used for connecting to the database.
-            SqlCommand cmd = new SqlCommand("SELECT ProductTitle AS Product, CONCAT(\'S$\', CAST(Price AS decimal(18,2))) AS Price FROM Product WHERE Obsolete = 1", conn);
+            string query = "SELECT ProductTitle AS Product, CONCAT(\'S$\', CAST(Price AS decimal(18,2))) AS Price, ProductImage FROM Product WHERE Obsolete = 1 AND EffectiveDate <= GETDATE()";
+            if (NewProduct == "new") {
+                query = "SELECT ProductTitle AS Product, CONCAT(\'S$\', CAST(Price AS decimal(18,2))) AS Price, ProductImage " +
+                    "FROM Product WHERE Obsolete = 1 AND EffectiveDate <= GETDATE() AND EffectiveDate < DATEADD(m, 1, GETDATE())";
+            }
+
+            SqlCommand cmd = new SqlCommand(query, conn);
 
             //Instantiate a DataAdapter object and pass the SqlCommand object
             //Created as parameter.
@@ -63,5 +72,13 @@ namespace ZZ_Fashion.Public {
             displayCatalogue();
         }
 
+        protected void NewArrival_CheckedChanged(object sender, EventArgs e) {
+            Response.Redirect("/Public/Catalogue?new=new");
+            if (NewArrival.Checked) {
+                Response.Redirect("/Public/Catalogue?new=new");
+            } else {
+                Response.Redirect("/Public/Catalogue");
+            }
+        }
     }
 }

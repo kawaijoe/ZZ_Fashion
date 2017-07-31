@@ -29,11 +29,6 @@
         </div>
     </div>
     <br />
-    <div style="text-align: center;">
-        <a href="" style="align-items: center;">Don't have an account?</a>
-        <br />
-        <a href="" style="align-items: center;">Forgot Password?</a>
-    </div>
 
     
 </asp:Content>

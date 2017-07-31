@@ -1,14 +1,11 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Public.master.cs" Inherits="ZZ_Fashion.Public.Public" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Navbar" runat="server">
-    <li><a href="#about">Male</a></li>
-    <li><a href="#contact">Female</a></li>
-    <li><a href="#contact">About Us</a></li>
+    <li><a href="#contact"></a></li>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="NavbarRight" runat="server">
-    <li><a href="#contact">Cart (2)</a></li>
-    <li><a href="#contact">Login/Register</a></li>
+    <li><a href="#contact">Login</a></li>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">

@@ -22,22 +22,22 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
         protected global::System.Web.UI.WebControls.TextBox ProductTitle;
         
         /// <summary>
-        /// ImagePreview control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImagePreview;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// UploadFile control.
+        /// UploadPhoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UploadFile;
+        protected global::System.Web.UI.WebControls.FileUpload UploadPhoto;
         
         /// <summary>
         /// Price control.
@@ -49,6 +49,33 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
         protected global::System.Web.UI.WebControls.TextBox Price;
         
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        
+        /// <summary>
+        /// CompareValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator2;
+        
+        /// <summary>
         /// EffectiveDate control.
         /// </summary>
         /// <remarks>
@@ -58,22 +85,22 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
         protected global::System.Web.UI.WebControls.Calendar EffectiveDate;
         
         /// <summary>
-        /// ObsoleteTrue control.
+        /// ObsoleteZero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton ObsoleteTrue;
+        protected global::System.Web.UI.WebControls.RadioButton ObsoleteZero;
         
         /// <summary>
-        /// ObsoleteFalse control.
+        /// ObsoleteOne control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton ObsoleteFalse;
+        protected global::System.Web.UI.WebControls.RadioButton ObsoleteOne;
         
         /// <summary>
         /// Update control.
