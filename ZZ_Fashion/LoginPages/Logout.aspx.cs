@@ -6,9 +6,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace ZZ_Fashion.LoginPages {
-    public partial class Login : System.Web.UI.MasterPage {
+    public partial class logout : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
-            
+            Session.Abandon();
+            Session.Clear();
+            Session.RemoveAll();
+            Response.AppendHeader("Refresh", "5;url=/Public/Catalogue.aspx");
         }
     }
 }

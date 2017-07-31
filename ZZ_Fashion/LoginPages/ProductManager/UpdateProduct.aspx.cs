@@ -51,7 +51,7 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
                     ProductTitle.Text = Convert.ToString(result.Tables["Product"].Rows[0]["ProductTitle"]);
 
                 if (!DBNull.Value.Equals(result.Tables["Product"].Rows[0]["Price"]))
-                    Price.Text = Convert.ToString(result.Tables["Product"].Rows[0]["Price"]);
+                    Price.Text = Convert.ToDouble(result.Tables["Product"].Rows[0]["Price"]).ToString();
 
                 if (!DBNull.Value.Equals(result.Tables["Product"].Rows[0]["EffectiveDate"]))
                     EffectiveDate.SelectedDate = Convert.ToDateTime(result.Tables["Product"].Rows[0]["EffectiveDate"]);
@@ -103,7 +103,6 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
                 cmd.Parameters.AddWithValue("@image", fileName);
 
             cmd.Parameters.AddWithValue("@title", ProductTitle.Text.ToString());
-            Debug.WriteLine(ProductTitle.Text);
             cmd.Parameters.AddWithValue("@price", Price.Text.ToString());
             cmd.Parameters.AddWithValue("@date", EffectiveDate.SelectedDate);
 

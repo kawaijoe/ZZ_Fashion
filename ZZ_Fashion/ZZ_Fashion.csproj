@@ -157,10 +157,10 @@
     <Content Include="LoginPages\Customer\CreateResponse.aspx" />
     <Content Include="LoginPages\Customer\Customer.master" />
     <Content Include="LoginPages\Customer\CustomerHomePage.aspx" />
-    <Content Include="LoginPages\Customer\Login.aspx" />
     <Content Include="LoginPages\Customer\Profile.aspx" />
     <Content Include="LoginPages\Customer\UpdateCustomer.aspx" />
     <Content Include="LoginPages\Customer\ViewResponse.aspx" />
+    <Content Include="LoginPages\Logout.aspx" />
     <Content Include="LoginPages\Marketing\CustomerFeedback.aspx" />
     <Content Include="LoginPages\Marketing\CustomerTransactions.aspx" />
     <Content Include="LoginPages\Marketing\FeedbackResponse.aspx" />
@@ -173,7 +173,6 @@
     <Content Include="LoginPages\SalesPersonnel\CreateCustomer.aspx" />
     <Content Include="LoginPages\SalesPersonnel\SalesPersonnel.master" />
     <Content Include="LoginPages\Login.master" />
-    <Content Include="Public\AboutUs.aspx" />
     <Content Include="Public\Catalogue.aspx" />
     <Content Include="Public\Image\cart.PNG" />
     <Content Include="Public\Image\catalogue.PNG" />
@@ -229,6 +228,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Authentication.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -285,13 +285,6 @@
     <Compile Include="LoginPages\Customer\CustomerHomePage.aspx.designer.cs">
       <DependentUpon>CustomerHomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginPages\Customer\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginPages\Customer\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LoginPages\Customer\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -319,6 +312,13 @@
     </Compile>
     <Compile Include="LoginPages\Login.master.designer.cs">
       <DependentUpon>Login.master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPages\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPages\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPages\Marketing\CustomerFeedback.aspx.cs">
       <DependentUpon>CustomerFeedback.aspx</DependentUpon>
@@ -427,13 +427,6 @@
       <DependentUpon>VoucherRedeem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Public\AboutUs.aspx.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Public\AboutUs.aspx.designer.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Public\Catalogue.aspx.cs">
       <DependentUpon>Catalogue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

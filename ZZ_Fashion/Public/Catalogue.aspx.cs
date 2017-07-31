@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,11 +16,15 @@ namespace ZZ_Fashion.Public {
 
         protected void Page_Init(object sender, EventArgs e) {
             NewProduct = Request.QueryString["new"];
+
+            if (NewProduct == "new")
+                NewArrival.Checked = true;
+
             displayCatalogue();
         }
 
         protected void Page_Load(object sender, EventArgs e) {
-
+            
         }
 
         private void displayCatalogue() {
@@ -32,10 +37,12 @@ namespace ZZ_Fashion.Public {
             //Instantiate a SqlCommand object, supply it with the SQL statement
             //SELECT  that operates against the database, and the connection object
             //used for connecting to the database.
-            string query = "SELECT ProductTitle AS Product, CONCAT(\'S$\', CAST(Price AS decimal(18,2))) AS Price, ProductImage FROM Product WHERE Obsolete = 1 AND EffectiveDate <= GETDATE()";
+            string query = "SELECT ProductTitle AS Product, CONCAT(\'S$\', CAST(Price AS decimal(18,2))) AS Price, ProductImage " +
+                "FROM Product WHERE Obsolete = 1 AND EffectiveDate <= GETDATE()";
             if (NewProduct == "new") {
+                Debug.WriteLine("New Query");
                 query = "SELECT ProductTitle AS Product, CONCAT(\'S$\', CAST(Price AS decimal(18,2))) AS Price, ProductImage " +
-                    "FROM Product WHERE Obsolete = 1 AND EffectiveDate <= GETDATE() AND EffectiveDate < DATEADD(m, 1, GETDATE())";
+                    "FROM Product WHERE Obsolete = 1 AND DATEPART(m, GETDATE()) = DATEPART(m, EffectiveDate)";
             }
 
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -73,7 +80,6 @@ namespace ZZ_Fashion.Public {
         }
 
         protected void NewArrival_CheckedChanged(object sender, EventArgs e) {
-            Response.Redirect("/Public/Catalogue?new=new");
             if (NewArrival.Checked) {
                 Response.Redirect("/Public/Catalogue?new=new");
             } else {

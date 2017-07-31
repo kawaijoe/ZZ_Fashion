@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="NavbarRight" runat="server">
-    <li><a href="#contact">Login</a></li>
+    <li><a href="Login.aspx">Login</a></li>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">

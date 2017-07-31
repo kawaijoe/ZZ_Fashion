@@ -14,7 +14,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12" style="padding-top:5px">
-                    <asp:CheckBox ID="NewArrival" runat="server" Text="New Arrivals" OnCheckedChanged="NewArrival_CheckedChanged" />
+                    <asp:CheckBox ID="NewArrival" runat="server" Text="New Arrivals" OnCheckedChanged="NewArrival_CheckedChanged" AutoPostBack="true" />
                 </div>
             </div>
         </div>
