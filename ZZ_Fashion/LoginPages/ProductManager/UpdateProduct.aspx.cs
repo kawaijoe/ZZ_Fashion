@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,7 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
 
         string ProductId = "1";
 
-        protected void Page_Load(object sender, EventArgs e) {
+        protected void Page_Init(object sender, EventArgs e) {
             ProductId = Request.QueryString["productid"];
             Load_Data();
         }
@@ -102,6 +103,7 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
                 cmd.Parameters.AddWithValue("@image", fileName);
 
             cmd.Parameters.AddWithValue("@title", ProductTitle.Text.ToString());
+            Debug.WriteLine(ProductTitle.Text);
             cmd.Parameters.AddWithValue("@price", Price.Text.ToString());
             cmd.Parameters.AddWithValue("@date", EffectiveDate.SelectedDate);
 
