@@ -11,7 +11,7 @@
         <div>
             <asp:Label ID="Label1" runat="server" Text="Logout successful."></asp:Label>
             You will redirect in 5 seconds. If you didnt, 
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/index.aspx">
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Public/Catalogue.aspx">
             click here to redirect.</asp:HyperLink>
         </div>
     </form>
