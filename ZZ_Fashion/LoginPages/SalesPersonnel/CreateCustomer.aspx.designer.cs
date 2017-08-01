@@ -12,6 +12,7 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
     
     public partial class CreateCustomer {
         
+#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         /// <summary>
         /// ID control.
         /// </summary>
@@ -20,6 +21,7 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ID;
+#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         
         /// <summary>
         /// Name control.

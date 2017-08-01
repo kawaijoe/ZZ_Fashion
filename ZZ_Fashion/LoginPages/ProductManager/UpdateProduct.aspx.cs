@@ -120,7 +120,7 @@ namespace ZZ_Fashion.LoginPages.ProductManager {
             //A connection should be closed after operations.
             conn.Close();
 
-            Response.Redirect("/LoginPages/ProductManager/ViewProduct");
+            Response.Redirect("~/LoginPages/ProductManager/ViewProduct");
 
         }
     }

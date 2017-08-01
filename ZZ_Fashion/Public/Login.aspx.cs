@@ -71,7 +71,9 @@ namespace ZZ_Fashion.Public {
                         lblMessage.Text = "Invalid Login Credentials";
                     }
                 }
+#pragma warning disable CS0168 // Variable is declared but never used
             } catch (IndexOutOfRangeException i) {
+#pragma warning restore CS0168 // Variable is declared but never used
                 lblMessage.Text = "Invalid Login Credentials";
             }
             
@@ -80,19 +82,19 @@ namespace ZZ_Fashion.Public {
         public void redirect() {
             switch (Session["Type"].ToString()) {
                 case "Customer":
-                    Response.Redirect("/LoginPages/Customer/CustomerHomePage.aspx");
+                    Response.Redirect("~/LoginPages/Customer/CustomerHomePage.aspx");
                     break;
 
                 case "Marketing Personnel":
-                    Response.Redirect("/LoginPages/Marketing/CustomerFeedback.aspx");
+                    Response.Redirect("~/LoginPages/Marketing/CustomerFeedback.aspx");
                     break;
 
                 case "Product Manager":
-                    Response.Redirect("/LoginPages/ProductManager/ViewProduct.aspx");
+                    Response.Redirect("~/LoginPages/ProductManager/ViewProduct.aspx");
                     break;
 
                 case "Sales Personnel":
-                    Response.Redirect("/LoginPages/SalesPersonnel/CreateCustomer.aspx");
+                    Response.Redirect("~/LoginPages/SalesPersonnel/CreateCustomer.aspx");
                     break;
 
                 default:

@@ -81,9 +81,9 @@ namespace ZZ_Fashion.Public {
 
         protected void NewArrival_CheckedChanged(object sender, EventArgs e) {
             if (NewArrival.Checked) {
-                Response.Redirect("/Public/Catalogue?new=new");
+                Response.Redirect("~/Public/Catalogue?new=new");
             } else {
-                Response.Redirect("/Public/Catalogue");
+                Response.Redirect("~/Public/Catalogue");
             }
         }
     }

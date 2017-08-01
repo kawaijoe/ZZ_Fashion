@@ -8,7 +8,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="NavbarRight" runat="server">
     <asp:ContentPlaceHolder ID="NavbarRight" runat="server">
     </asp:ContentPlaceHolder>
-    <li><a runat="server" href="/LoginPages/logout">Log Out</a></li>
+    <li><a runat="server" href="~/LoginPages/logout">Log Out</a></li>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
