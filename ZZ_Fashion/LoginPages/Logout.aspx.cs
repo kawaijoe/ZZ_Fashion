@@ -11,7 +11,7 @@ namespace ZZ_Fashion.LoginPages {
             Session.Abandon();
             Session.Clear();
             Session.RemoveAll();
-            Response.AppendHeader("Refresh", "5;url=~/Public/Catalogue.aspx");
+            Response.AppendHeader("Refresh", "5;url=../Public/Catalogue.aspx");
         }
     }
 }

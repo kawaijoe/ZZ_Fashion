@@ -5,9 +5,8 @@
 </asp:Content>
 
 <asp:Content ID="NavbarRight" ContentPlaceHolderID="NavbarRight" runat="server">
-    <li><a runat="server" href="Profile.aspx">Profile</a></li>
+    <li><a runat="server" href="~/LoginPages/Customer/Profile.aspx">Profile</a></li>
     <li><a runat="server" href="~/LoginPages/Customer/ViewResponse.aspx">FeedBack</a></li>
-    <li><a runat="server" href="~/Cart">Cart</a></li>
 </asp:Content>
 
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
