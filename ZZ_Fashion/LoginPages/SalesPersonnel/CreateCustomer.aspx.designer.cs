@@ -24,6 +24,15 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
 #pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         
         /// <summary>
+        /// cvError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvError;
+        
+        /// <summary>
         /// Name control.
         /// </summary>
         /// <remarks>

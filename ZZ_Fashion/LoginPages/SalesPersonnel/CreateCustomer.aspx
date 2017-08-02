@@ -8,8 +8,9 @@
         </tr>
         <tr>
             <td style="width: 134px">Membership ID:</td>
-            <td>
+            <td style="margin-left: 40px">
                 <asp:TextBox ID="ID" runat="server">M00000001</asp:TextBox>
+                <asp:CustomValidator ID="cvError" runat="server" ControlToValidate="ID" ErrorMessage="MemberID Already Existed!" OnServerValidate="cvError_ServerValidate"></asp:CustomValidator>
             </td>
         </tr>
         <tr>

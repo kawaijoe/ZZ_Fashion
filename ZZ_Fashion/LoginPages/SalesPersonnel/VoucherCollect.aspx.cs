@@ -22,7 +22,7 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
             string voucher;
             voucher = txtSerialNo.Text;
             CollectVoucher(voucher);
-            
+                
         }
 
         public int CollectVoucher(string cv)
@@ -33,6 +33,7 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
 
             cmd.Parameters.AddWithValue("@voucher", cv);
 
+            //lblUpdated.Visible = true;
             conn.Open();
 
             cmd.ExecuteNonQuery();
@@ -63,9 +64,14 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
             if (result.Tables["Voucher"].Rows.Count == 0)
             {
                 args.IsValid = false;
+                
             }
             else
+            {
+                lblUpdated.Text = "Done!";
                 args.IsValid = true;
+                
+            }
         }
     }
 }

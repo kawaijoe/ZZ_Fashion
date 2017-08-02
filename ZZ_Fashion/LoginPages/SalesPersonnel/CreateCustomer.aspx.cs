@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace ZZ_Fashion.LoginPages.SalesPersonnel
 {
@@ -72,6 +75,31 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
         protected void M_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void cvError_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            string strConn = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
+            SqlConnection conn = new SqlConnection(strConn);
+            SqlCommand command = new SqlCommand("Select * From Customer WHERE MemberID = @ID ", conn);
+
+            command.Parameters.AddWithValue("@ID", ID.Text);
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataSet result = new DataSet();
+
+            conn.Open();
+
+            dataAdapter.Fill(result, "ID");
+
+            conn.Close();
+
+            if (result.Tables["ID"].Rows.Count == 0)
+            {
+                args.IsValid = false;
+            }
+            else
+                args.IsValid = true;
         }
     }
 }
