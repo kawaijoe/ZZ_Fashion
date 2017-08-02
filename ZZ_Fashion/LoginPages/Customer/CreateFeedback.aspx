@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPages/Customer/Customer.master" AutoEventWireup="true" CodeBehind="CreateFeedback.aspx.cs" Inherits="ZZ_Fashion.LoginPages.Customer.CreateFeedback" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <table cellpadding="0" cellspacing="0" class="nav-justified">
+    <table class="nav-justified">
         <tr>
             <td style="width: 192px; height: 81px; font-size: x-large;"><strong>Feedback</strong></td>
             <td>&nbsp;</td>

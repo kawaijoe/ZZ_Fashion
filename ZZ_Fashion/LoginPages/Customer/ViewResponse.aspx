@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoginPages/Customer/Customer.master" AutoEventWireup="true" CodeBehind="ViewResponse.aspx.cs" Inherits="ZZ_Fashion.LoginPages.Customer.ViewResponse" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:Label ID="lblFeedbackMsg" runat="server"></asp:Label>
+    <br />
     <asp:GridView ID="gvFeedback" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CssClass="col-xs-12 col-xs-push-4" DataKeyNames="FeedbackID" OnSelectedIndexChanged="gvFeedback_SelectedIndexChanged">
         <Columns>
             <asp:BoundField DataField="DateTimePosted" HeaderText="DateTimePosted" />
@@ -27,7 +29,7 @@
         </Columns>
     </asp:GridView>
     <br />
-    <asp:Button ID="CreateFeedback" runat="server" Text="Create Feedback" />
+    <asp:Button ID="CreateFeedback" runat="server" OnClick="CreateFeedback_Click" Text="Create Feedback" />
 &nbsp;&nbsp;&nbsp;
     <asp:Button ID="CreateResponse" runat="server" OnClick="CreateResponse_Click" Text="Create Response" />
 </asp:Content>

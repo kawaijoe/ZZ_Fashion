@@ -15,9 +15,6 @@ namespace ZZ_Fashion.LoginPages.Customer
         {
             if (!Page.IsPostBack)
             {
-                TitleFeedBack.Text = "Male Apparel Selection Limited";
-                FeedBackMsg.Text = "Male Selection of Clothing is too limited, please update your databse and add more clothes soon. I want to buy clothes for chinese new year. " +
-                    "Also, please add more discounts, it will help you attract more cutomers.";
             }
         }
 

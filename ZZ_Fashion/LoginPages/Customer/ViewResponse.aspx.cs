@@ -17,9 +17,12 @@ namespace ZZ_Fashion.LoginPages.Customer
         {
             if (!Page.IsPostBack)
             {
+                lblFeedbackMsg.Visible = false;
+
                 displayFeedbackList();
 
                 CreateResponse.Visible = false;
+               
             }
         }
 
@@ -106,6 +109,14 @@ namespace ZZ_Fashion.LoginPages.Customer
             dataAdapter.Fill(result, "FeedBack");
 
             connection.Close();
+
+            if (result.Tables["Feedback"].Rows.Count == 0)
+            {
+                lblFeedbackMsg.Text = "You have not made a feedback yet...";
+                lblFeedbackMsg.Visible = true;
+            }
+            else
+                lblFeedbackMsg.Visible = false;
 
             gvFeedback.DataSource = result.Tables["FeedBack"];
 
