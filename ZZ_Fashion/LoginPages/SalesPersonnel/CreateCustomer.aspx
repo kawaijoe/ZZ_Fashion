@@ -21,24 +21,25 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 134px">Gender:</td>
-            <td>
+            <td style="width: 134px; height: 47px;">Gender:</td>
+            <td style="height: 47px">
                 <asp:RadioButton ID="M" runat="server" GroupName="Gender" OnCheckedChanged="M_CheckedChanged" Text="Male" />
                 <asp:RadioButton ID="F" runat="server" GroupName="Gender" Text="Female" />
             </td>
         </tr>
         <tr>
-            <td style="width: 134px">Date of birth:</td>
-            <td>
-                <asp:TextBox ID="DOB" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="reqDOB" runat="server" Display="Dynamic" ErrorMessage="REQUIRED FIELD" ControlToValidate="DOB"></asp:RequiredFieldValidator>
+            <td style="width: 134px; height: 61px;">Date of birth:</td>
+            <td style="height: 61px">
+                <asp:TextBox ID="DOBtext" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="reqDOB" runat="server" Display="Dynamic" ErrorMessage="REQUIRED FIELD" ControlToValidate="DOBtext"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
             <td style="width: 134px">Email Address:</td>
             <td>
                 <asp:TextBox ID="Email" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="REQUIRED FIELD" ControlToValidate="Email"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="Email" Display="Dynamic" ErrorMessage="Invalid Email!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="reqEmail" runat="server" Display="Dynamic" ErrorMessage="REQUIRED FIELD" ControlToValidate="Email"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>

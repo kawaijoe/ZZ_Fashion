@@ -30,7 +30,9 @@
         </tr>
         <tr>
             <td style="width: 116px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Label ID="lblUpdated" runat="server"></asp:Label>
+            </td>
         </tr>
     </table>
 </asp:Content>

@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace ZZ_Fashion.LoginPages.SalesPersonnel
 {
@@ -21,6 +22,7 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
                 ddlCountry.Items.Add("Indonesia");
                 ddlCountry.Items.Add("China");
                 ddlCountry.Items.Add("United States");
+
             }
 
         }
@@ -29,10 +31,10 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
         {
             if(Page.IsValid)
             {
-
+                lblmsg.Text = "";
                 string memberID = ID.Text;
                 string name = Name.Text;
-                DateTime dob = Convert.ToDateTime(DOB.Text);
+                DateTime DOB = Convert.ToDateTime(DOBtext.Text);
                 string email = Email.Text;
                 string phone = Phone.Text;
                 string address = Address.Text;
@@ -51,7 +53,7 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
                 Customer Cus = new Customer();
                 Cus.ID = memberID;
                 Cus.Name = name;
-                Cus.DOB = dob;
+                Cus.DOB = DOB;
                 Cus.Email = email;
                 Cus.Phone = phone;
                 Cus.Address = address;
@@ -96,10 +98,12 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
 
             if (result.Tables["ID"].Rows.Count == 0)
             {
-                args.IsValid = false;
+                args.IsValid = true;
             }
             else
-                args.IsValid = true;
+                args.IsValid = false;
         }
+
+
     }
 }

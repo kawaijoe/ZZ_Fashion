@@ -19,9 +19,19 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            string voucher;
-            voucher = txtSerialNo.Text;
-            CollectVoucher(voucher);
+            if (Page.IsValid)
+            {
+                lblUpdated.Text = "";
+                string voucher = ID.Text;
+                int errorCode = CollectVoucher(voucher);
+                if (errorCode == 0)
+                {
+                    lblUpdated.Text = "Done!";
+                }
+                else if (errorCode == -2)
+                    lblUpdated.Text = "Not Done!";
+            }
+
                 
         }
 
@@ -29,18 +39,24 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
         {
             string strConn = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("UPDATE CashVoucher SET Status = 1  WHERE VoucherSN = @voucher ", conn);
+            SqlCommand cmd = new SqlCommand("UPDATE CashVoucher SET Status = 1, VoucherSN = @voucher WHERE MemberID = @ID", conn);
 
             cmd.Parameters.AddWithValue("@voucher", cv);
+            cmd.Parameters.AddWithValue("@ID", ID.Text);
 
             //lblUpdated.Visible = true;
             conn.Open();
 
-            cmd.ExecuteNonQuery();
+           int count = cmd.ExecuteNonQuery();
             conn.Close();
-                  
 
-            return 0;
+            if (count == 1)
+            {
+                return 0;
+            }
+            else
+                return -2;
+
 
         }
 
@@ -48,27 +64,26 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
         {
             string strConn = ConfigurationManager.ConnectionStrings["ZZFashionCRMConnectionString"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand command = new SqlCommand("Select * From CashVoucher WHERE VoucherSN = @voucher ", conn);
+            SqlCommand command = new SqlCommand("Select * From CashVoucher WHERE MemberID = @ID", conn);
 
-            command.Parameters.AddWithValue("@voucher", txtSerialNo.Text);
+            command.Parameters.AddWithValue("@ID", ID.Text);
 
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataSet result = new DataSet();
 
             conn.Open();
 
-            dataAdapter.Fill(result, "Voucher");
+            dataAdapter.Fill(result, "Member");
             
             conn.Close();
 
-            if (result.Tables["Voucher"].Rows.Count == 0)
+            if (result.Tables["Member"].Rows.Count == 0)
             {
                 args.IsValid = false;
                 
             }
             else
             {
-                lblUpdated.Text = "Done!";
                 args.IsValid = true;
                 
             }

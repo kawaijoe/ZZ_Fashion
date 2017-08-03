@@ -11,15 +11,26 @@
             <td style="height: 22px">&nbsp;</td>
         </tr>
         <tr>
-            <td style="width: 99px; height: 24px;">Serial Number:</td>
+            <td style="width: 99px; height: 24px;">MemberID:</td>
             <td style="height: 24px">
-                <asp:TextBox ID="txtSerialNo" runat="server"></asp:TextBox>
+                <asp:TextBox ID="ID" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td style="width: 99px">&nbsp;</td>
-            <td>
-                <asp:CustomValidator ID="cvError" runat="server" ControlToValidate="txtSerialNo" ErrorMessage="Serial Number Invalid!" OnServerValidate="cvError_ServerValidate"></asp:CustomValidator>
+            <td style="width: 99px; height: 22px;"></td>
+            <td style="height: 22px">
+                <asp:CustomValidator ID="cvError" runat="server" ControlToValidate="txtSerialNo" ErrorMessage="Member Invalid!" OnServerValidate="cvError_ServerValidate"></asp:CustomValidator>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 99px; height: 22px;"></td>
+            <td style="height: 22px">
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 99px; height: 22px;">Serial No:</td>
+            <td style="height: 22px">
+                <asp:TextBox ID="txtSerialNo" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -31,7 +42,7 @@
         <tr>
             <td style="width: 99px">&nbsp;</td>
             <td>
-                <asp:Label ID="lblUpdated" runat="server" Visible="False"></asp:Label>
+                <asp:Label ID="lblUpdated" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>

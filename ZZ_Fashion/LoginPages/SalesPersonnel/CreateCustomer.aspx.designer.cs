@@ -12,7 +12,6 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
     
     public partial class CreateCustomer {
         
-#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         /// <summary>
         /// ID control.
         /// </summary>
@@ -21,7 +20,6 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ID;
-#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         
         /// <summary>
         /// cvError control.
@@ -69,13 +67,13 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         protected global::System.Web.UI.WebControls.RadioButton F;
         
         /// <summary>
-        /// DOB control.
+        /// DOBtext control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DOB;
+        protected global::System.Web.UI.WebControls.TextBox DOBtext;
         
         /// <summary>
         /// reqDOB control.
@@ -96,13 +94,22 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         protected global::System.Web.UI.WebControls.TextBox Email;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// revEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
+        
+        /// <summary>
+        /// reqEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqEmail;
         
         /// <summary>
         /// Phone control.

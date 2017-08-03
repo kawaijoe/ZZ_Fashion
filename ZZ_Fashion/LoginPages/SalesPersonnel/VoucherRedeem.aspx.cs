@@ -19,9 +19,24 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel
 
         protected void Redeem_Click(object sender, EventArgs e)
         {
-            string voucher;
-            voucher = txtSerialNo.Text;
-            redeem(voucher);
+            if (Page.IsValid)
+            {
+                lblUpdated.Text = "";
+                string voucher;
+                voucher = txtSerialNo.Text;
+                int errorCode = redeem(voucher);
+                if (errorCode == 0)
+                {
+                    lblUpdated.Text = "Done!";
+                }
+                else
+                    lblUpdated.Text = "Not Done!";
+
+            }
+
+            
+
+            
 
         }
 

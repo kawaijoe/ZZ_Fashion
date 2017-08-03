@@ -13,13 +13,13 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
     public partial class VoucherCollect {
         
         /// <summary>
-        /// txtSerialNo control.
+        /// ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSerialNo;
+        protected global::System.Web.UI.WebControls.TextBox ID;
         
         /// <summary>
         /// cvError control.
@@ -29,6 +29,15 @@ namespace ZZ_Fashion.LoginPages.SalesPersonnel {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator cvError;
+        
+        /// <summary>
+        /// txtSerialNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSerialNo;
         
         /// <summary>
         /// btnUpdate control.
